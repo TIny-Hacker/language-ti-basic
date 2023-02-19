@@ -1,0 +1,44 @@
+{
+  "name": "ti-basic",
+  "displayName": "TI-BASIC",
+  "version": "0.0.1",
+  "description": "Syntax highlighting for z80 TI-BASIC",
+  "author": {
+    "name": "TIny_Hacker",
+    "email": "thetiniesthacker@gmail.com",
+    "url": "https://tiny-hacker.github.io/"
+  },
+  "publisher": "TIny_Hacker",
+  "license": "GPL-3",
+  "icon": "assets/extension-icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TIny-Hacker/language-ti-basic"
+  },
+  "bugs": {
+		"url": "https://github.com/TIny-Hacker/language-ti-basic/issues"
+	},
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "ti-basic",
+      "aliases": ["TI-BASIC", "ti-basic"],
+      "extensions": [".8xp",".8xp.txt",".83p",".83p.txt"],
+      "configuration": "./language-configuration.json",
+      "icon": {
+        "light": "assets/ti-basic-file.svg",
+        "dark": "assets/ti-basic-file.svg"
+      }
+    }],
+    "grammars": [{
+      "language": "ti-basic",
+      "scopeName": "source.8xp",
+      "path": "./syntaxes/ti-basic.tmLanguage.json"
+    }]
+  }
+}

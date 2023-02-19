@@ -1,0 +1,41 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "8xp",
+	"patterns": [
+	  {
+		"include": "#control"
+	  },
+	  {
+		"include": "#operators"
+	  },
+	  {
+		"include": "#strings"
+	  }
+	],
+	"repository": {
+	  "control": {
+		"patterns": [
+		  {
+			"name": "keyword.control.8xp",
+			"match": "\\b(If|Then|Else|For|While|Repeat|End|Pause|Lbl|Goto|Wait|IS>|DS<|Menu|prgm|Return|Stop|DelVar|GraphStyle|GraphColor|OpenLib|ExecLib)\\b"
+		  }
+		]
+	  },
+	  "operators": {
+		"name": "keyword.operator.8xp",
+		"match": "(->|→|=|!=|≠|>|>=|≥|<|<=|≤| and | or | xor |not\()"
+	  },
+	  "strings": {
+		"name": "string.quoted.double.8xp",
+		"begin": "\"",
+		"end": "\"",
+		"patterns": [
+		  {
+			"name": "constant.character.escape.8xp",
+			"match": "\\\\."
+		  }
+		]
+	  }
+	},
+	"scopeName": "source.8xp"
+}
