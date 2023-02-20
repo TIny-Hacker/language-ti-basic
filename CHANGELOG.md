@@ -2,6 +2,12 @@
 
 All notable changes to the "ti-basic" extension will be documented in this file.
 
+## [0.1.1] - 2023-02-20
+
+### Changed
+
+- Improved the README
+
 ## [0.1.0] - 2023-02-20
 
 ### Added

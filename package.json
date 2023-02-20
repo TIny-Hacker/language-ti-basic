@@ -1,14 +1,14 @@
 {
   "name": "ti-basic",
   "displayName": "TI-BASIC",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Syntax highlighting for z80 TI-BASIC",
   "author": {
     "name": "TIny_Hacker",
     "email": "thetiniesthacker@gmail.com",
     "url": "https://tiny-hacker.github.io/"
   },
-  "publisher": "TIny_Hacker",
+  "publisher": "tiny-hacker",
   "license": "GPL-3",
   "icon": "assets/extension-icon.png",
   "repository": {
