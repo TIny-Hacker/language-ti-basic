@@ -16,8 +16,8 @@
     "url": "https://github.com/TIny-Hacker/language-ti-basic"
   },
   "bugs": {
-		"url": "https://github.com/TIny-Hacker/language-ti-basic/issues"
-	},
+    "url": "https://github.com/TIny-Hacker/language-ti-basic/issues"
+  },
   "engines": {
     "vscode": "^1.75.0"
   },
@@ -25,20 +25,32 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "ti-basic",
-      "aliases": ["TI-BASIC", "ti-basic"],
-      "extensions": [".8xp",".8xp.txt",".83p",".83p.txt"],
-      "configuration": "./language-configuration.json",
-      "icon": {
-        "light": "assets/ti-basic-file.svg",
-        "dark": "assets/ti-basic-file.svg"
+    "languages": [
+      {
+        "id": "ti-basic",
+        "aliases": [
+          "TI-BASIC",
+          "ti-basic"
+        ],
+        "extensions": [
+          ".8xp",
+          ".8xp.txt",
+          ".83p",
+          ".83p.txt"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "assets/ti-basic-file.svg",
+          "dark": "assets/ti-basic-file.svg"
+        }
       }
-    }],
-    "grammars": [{
-      "language": "ti-basic",
-      "scopeName": "source.8xp",
-      "path": "./syntaxes/ti-basic.tmLanguage.json"
-    }]
+    ],
+    "grammars": [
+      {
+        "language": "ti-basic",
+        "scopeName": "source.8xp",
+        "path": "./syntaxes/ti-basic.tmLanguage.json"
+      }
+    ]
   }
 }
