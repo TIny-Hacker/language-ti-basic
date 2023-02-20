@@ -1,6 +1,6 @@
 # TI-BASIC Syntax Highlighting <a href="https://marketplace.visualstudio.com/items?itemName=tiny-hacker.ti-basic"><img alt="Visual Studio Marketplace Version" src="https://img.shields.io/visual-studio-marketplace/v/tiny-hacker.ti-basic?label=Visual%20Studio%20Marketplace"></a> <a href="https://marketplace.visualstudio.com/items?itemName=tiny-hacker.ti-basic"><img alt="Visual Studio Marketplace Downloads" src="https://img.shields.io/visual-studio-marketplace/d/tiny-hacker.ti-basic"></a> <a href="https://marketplace.visualstudio.com/items?itemName=tiny-hacker.ti-basic"><img alt="Visual Studio Marketplace Rating" src="https://img.shields.io/visual-studio-marketplace/r/tiny-hacker.ti-basic"></a>
 
-![Screenshot](https://raw.githubusercontent.com/TIny-Hacker/language-ti-basic/main/assets/screenshot.png)
+<img alt="Screenshot" src="https://raw.githubusercontent.com/TIny-Hacker/language-ti-basic/main/assets/screenshot.png" width="250" />
 
 ## About
 This extension provides syntax highlighting for the z80 TI-BASIC language. This extension is meant specifically for the TI-84 Plus CE/83 Premium CE calculators, though it may work with others as well. Other useful features may be added in the future!
