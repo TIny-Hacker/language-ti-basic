@@ -1,6 +1,4 @@
 {
-    "comments": {
-    },
     // symbols used as brackets
     "brackets": [
         ["{", "}"],

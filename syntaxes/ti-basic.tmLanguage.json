@@ -2,40 +2,133 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "8xp",
 	"patterns": [
-	  {
-		"include": "#control"
-	  },
-	  {
-		"include": "#operators"
-	  },
-	  {
-		"include": "#strings"
-	  }
+		{
+			"include": "#control"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#headers"
+		}
 	],
 	"repository": {
-	  "control": {
-		"patterns": [
-		  {
+		"control": {
 			"name": "keyword.control.8xp",
-			"match": "\\b(If|Then|Else|For|While|Repeat|End|Pause|Lbl|Goto|Wait|IS>|DS<|Menu|prgm|Return|Stop|DelVar|GraphStyle|GraphColor|OpenLib|ExecLib)\\b"
-		  }
-		]
-	  },
-	  "operators": {
-		"name": "keyword.operator.8xp",
-		"match": "(->|→|=|!=|≠|>|>=|≥|<|<=|≤| and | or | xor |not\()"
-	  },
-	  "strings": {
-		"name": "string.quoted.double.8xp",
-		"begin": "\"",
-		"end": "\"",
-		"patterns": [
-		  {
-			"name": "constant.character.escape.8xp",
-			"match": "\\\\."
-		  }
-		]
-	  }
+			"match": "(If|Then|Else|For|While|Repeat|End|Pause|Lbl|Goto|Wait|IS>|DS<|Menu|Return|Stop|DelVar|GraphStyle|GraphColor|OpenLib|ExecLib)"
+		},
+		"operators": {
+			"name": "keyword.operator.8xp",
+			"match": "(\\+|-|\\*|/|\\^|\\√\\((.*)\\)->|→|=|!=|≠|>|>=|≥|<|<=|≤|and|or|xor|not)"
+		},
+		"numbers": {
+			"name": "constant.numeric.8xp",
+			"match": "(\\d+\\.?\\d*|\\.\\d+)"
+		},
+		"functions": {
+			"patterns": [
+				{
+					"name": "entity.name.function.8xp",
+					"match": "prgm[A-Zθ][0-9A-Zθ]{0,7}"
+				},
+				{
+					"name": "entity.name.function.8xp",
+					"match": "(abs|angle|ANOVA|Archive|Asm|AsmComp|Asm84CEPrgm|augment|AUTO|AxesOff|AxesOn|a\\+bi|BackgroundOff|BackgroundOn|bal|binomcdf|binompdf|BorderColor|Boxplot|checkTmr|X²cdf|X²pdf|X²\\-Test|X²GOF\\-Test|Circle|CLASSIC|Clear Entries|ClockOff|ClockOn|ClrAllLists|ClrDraw|ClrHome|ClrList|ClrTable|conj|CoordOff|CoordOn|cos|cos⁻¹|cosh|cosh⁻¹|CubicReg|cumSum|dayOfWk|dbd|DEC|▶Dec|Degree|DependAsk|DependAuto|det|DetectAsymOff|DetectAsymOn|DiagnosticOff|DiagnosticOn|dim|Disp|DispGraph|DispTable|▶DMS|Dot-Thick|Dot-Thin|DrawF|DrawInv|e\\^|\\|E|▶Eff|Eng|Equ▶String|eval|expr|ExpReg|ExprOff|ExprOn|Fcdf|▶F◀▶D|Fill|Fix|Float|fMax|fMin|fnInt|FnOff|FnOn|fPart|Fpdf|▶Frac|Full|Func|GarbageCollect|gcd|geometcdf|geometpdf|Get|GetCalc|getDate|getDtFmt|getDtStr|getTime|getTmFmt|getTmStr|getKey|GridDot|GridLine|GridOff|G\\-T|Histogram|Horiz|Horizontal|\\|i|identity|imag|IndpntAsk|IndpntAuto|Input|inString|int|ΣInt|invBinom|invNorm|invT|iPart|irr|isClockOn|LabelOff|LabelOn|lcm|length|Line|(LinReg)(?=\\((a\\+bx|ax\\+b)\\))|((?<=LinReg)\\((a\\+bx|ax\\+b)\\))|LinRegTInt|LinRegTTest|∆List|List▶matr|ln|LnReg|log|logBASE|Logistic|Manual\\-Fit|MATHPRINT|Matr▶list|max|mean|median|Med-Med|min|ModBoxPlot|n[CP]r|n\\/d|nDeriv|▶n/d◀▶Un/d|▶Nom|Normal|normal[cp]df|NormProbPlot|npv|Output|Param|piecewise|Plot[1-3]|PlotsOff|PlotsOn|Pmt_Bgn|Pmt_End|poisson[cp]df|Polar|▶Polar|PolarGC|ΣPrn|prod|Prompt|[12]\\-PropZ(Int|Test)|Pt\\-(Change|Off|On)|PwrReg|Pxl\\-(Change|Off|On)|pxl\\-Test|P▶Rx|P▶Ry|QuadReg|QuartReg|Radian|rand|randBin|randInt|randIntNoRep|randM|randNorm|re\\^θi|Real|real|Recall(GDB|Pic)|▶Rect|RectGC|ref|remainder|round|\\*row|row\\+|\\*row\\+|rowSwap|rref|R▶P[rθ]|2\\-SampFTest|2\\-Samp[TZ]Int|2\\-Samp[TZ]Test|Scatter|Sci|Select|Send|seq|Seq|SEQ|Sequential|setDate|setDtFmt|setTime|setTmFmt|SetUpEditor|Shade|ShadeX²|ShadeF|ShadeNorm|Shade_t|Simul|sin|sin⁻¹|sinh|sinh⁻¹|SinReg|solve|Sort[AD]|startTmr|STATWIZARD (OFF|ON)|stdDev|Store(GDB|Pic)|String▶Equ|su[bm]|Σ|tan|tan⁻¹|Tangent|tanh|tanh⁻¹|t[cp]df|Text|TextColor|Thick|Thin|Time|timeCnv|TInterval|toString|Trace|T\\-Test|tvm_FV|tvm_I%|tvm_N|tvm_Pmt|tv_PV|UnArchive|Un\\/d|uvAxes|uwAxes|[12]\\-Var Stats|variance|Vertical|vwAxes|Web|xyLine|ZBox|ZDecimal|ZFrac1/[2-58]|ZFrac1/10|ZInteger|ZInterval|Zoom In|Zoom Out|ZoomFit|ZoomRcl|ZoomStat|ZoomSto|ZPrevious|ZQuadrant1|ZSquare|ZStandard|Z\\-Test|ZTrig)"
+				},
+				{
+					"name": "entity.name.function.8xp",
+					"match": "(?<=(Goto|Lbl) )[0-9A-Zθ]{1,2}"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.8xp",
+			"begin": "\"",
+			"end": "\"|\n|(?=:|->|→)"
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "variable.language.8xp",
+					"match": "Ans"
+				},
+				{
+					"name": "variable.parameter.8xp",
+					"match": "\\b([A-Zθ]|Xmin|Xmax|Xscl|Ymin|Ymax|YScl|Xres|ΔX|ΔY|XFact|YFact|TraceStep|Tmin|Tmax|Tstep|θmin|θmax|θstep|[uvw]|((?<=[uvw])\\((nMin\\)))|nMin|nMax|PlotStart|PlotStep)\\b"
+				},
+				{
+					"name": "variable.parameter.8xp",
+					"match": "\\b(ZXmin|ZXmax|ZXscl|ZYmin|ZYmax|ZYscl|ZXres|ZTmin|ZTmax|ZTstep|Zθmin|Zθmax|Zθstep|Z[uvw]|((?<=Z[uvw])\\((nMin\\)))|ZnMin|ZnMax|ZPlotStart|ZPlotStep)\\b"
+				},
+				{
+					"name": "variable.parameter.8xp",
+					"match": "\\bGDB[0-9]\\b"
+				},
+				{
+					"name": "variable.parameter.8xp",
+					"match": "\\b(Pic[0-9]|Image[0-9])\\b"
+				},
+				{
+					"name": "variable.parameter.8xp",
+					"match": "\\b(n|x̄|Sx|σx|ȳ|Sy|σy|minX|maxX|minY|maxY|Σx|Σx²|Σy|Σy²|Σxy|RegEQ|[a-e]|r|r²|R²|p|z|t|x²|\\|F|df|ṗ|ṗ1|ṗ2|s|x̄1|x̄2|Sx1|Sx2|Sxp|n1|n2|lower|upper|x1|y1|x2|y2|x3|y3|Q1|Med|Q3)\\b"
+				},
+				{
+					"name": "variable.parameter.8xp",
+					"match": "\\b(TblStart|∆Tbl|TblInput)\\b"
+				},
+				{
+					"name": "variable.parameter.8xp",
+					"match": "\\bStr[0-9]\\b"
+				},
+				{
+					"name": "variable.parameter.8xp",
+					"match": "\\bY[0-9]\\b"
+				},
+				{
+					"name": "variable.parameter.8xp",
+					"match": "\\b[XY][1-6]T\\b"
+				},
+				{
+					"name": "variable.parameter.8xp",
+					"match": "\\br[1-6]\\b"
+				},
+				{
+					"name": "variable.parameter.8xp",
+					"match": "\\B\\|L[A-Zθ][0-9A-Zθ]{0,4}\\b"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.language.8xp",
+					"match": "\\b(CENTER|LEFT|RIGHT)\\b"
+				},
+				{
+					"name": "constant.language.8xp",
+					"match": "\\b(BLUE|RED|BLACK|MAGENTA|GREEN|ORANGE|BROWN|NAVY|LTBLUE|YELLOW|WHITE|LTGRAY|MEDGRAY|GRAY|DARKGRAY)\\b"
+				}
+			]
+		},
+		"headers": {
+			"name": "entity.name.section.8xp",
+			"match": "^\\:DCS[6]{0,1}$"
+		}
 	},
 	"scopeName": "source.8xp"
 }
