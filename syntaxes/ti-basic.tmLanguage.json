@@ -59,7 +59,7 @@
 		"strings": {
 			"name": "string.quoted.double.8xp",
 			"begin": "\"",
-			"end": "\"|\n|(?=:|->|→)"
+			"end": "\"|\n|(?=|->|→)"
 		},
 		"variables": {
 			"patterns": [
