@@ -29,8 +29,16 @@
 	],
 	"repository": {
 		"control": {
-			"name": "keyword.control.8xp",
-			"match": "(If|Then|Else|For|While|Repeat|End|Pause|Lbl|Goto|Wait|IS>|DS<|Menu|Return|Stop|DelVar|GraphStyle|GraphColor|OpenLib|ExecLib)"
+			"patterns": [
+				{
+					"name": "keyword.control.8xp",
+					"match": "\\b(If|Then|Else|For|While|Repeat|End|Pause|Lbl|Goto|Wait|IS>|DS<|Menu|Return|Stop|GraphStyle|GraphColor|OpenLib|ExecLib\\b)"
+				},
+				{
+					"name": "keyword.control.8xp",
+					"match": "(?<=[^a-z]|Ans)DelVar(?=[^a-zA-Z]|$)"
+				}
+			]
 		},
 		"operators": {
 			"name": "keyword.operator.8xp",
@@ -44,22 +52,26 @@
 			"patterns": [
 				{
 					"name": "entity.name.function.8xp",
-					"match": "prgm[A-Zθ][0-9A-Zθ]{0,7}"
+					"match": "\\bprgm[A-Zθ][0-9A-Zθ]{0,7}\\b"
 				},
 				{
 					"name": "entity.name.function.8xp",
-					"match": "(abs|angle|ANOVA|Archive|Asm|AsmComp|Asm84CEPrgm|augment|AUTO|AxesOff|AxesOn|a\\+bi|BackgroundOff|BackgroundOn|bal|binomcdf|binompdf|BorderColor|Boxplot|checkTmr|X²cdf|X²pdf|X²\\-Test|X²GOF\\-Test|Circle|CLASSIC|Clear Entries|ClockOff|ClockOn|ClrAllLists|ClrDraw|ClrHome|ClrList|ClrTable|conj|CoordOff|CoordOn|cos|cos⁻¹|cosh|cosh⁻¹|CubicReg|cumSum|dayOfWk|dbd|DEC|▶Dec|Degree|DependAsk|DependAuto|det|DetectAsymOff|DetectAsymOn|DiagnosticOff|DiagnosticOn|dim|Disp|DispGraph|DispTable|▶DMS|Dot-Thick|Dot-Thin|DrawF|DrawInv|e\\^|\\|E|▶Eff|Eng|Equ▶String|eval|expr|ExpReg|ExprOff|ExprOn|Fcdf|▶F◀▶D|Fill|Fix|Float|fMax|fMin|fnInt|FnOff|FnOn|fPart|Fpdf|▶Frac|Full|Func|GarbageCollect|gcd|geometcdf|geometpdf|Get|GetCalc|getDate|getDtFmt|getDtStr|getTime|getTmFmt|getTmStr|getKey|GridDot|GridLine|GridOff|G\\-T|Histogram|Horiz|Horizontal|\\|i|identity|imag|IndpntAsk|IndpntAuto|Input|inString|int|ΣInt|invBinom|invNorm|invT|iPart|irr|isClockOn|LabelOff|LabelOn|lcm|length|Line|(LinReg)(?=\\((a\\+bx|ax\\+b)\\))|((?<=LinReg)\\((a\\+bx|ax\\+b)\\))|LinRegTInt|LinRegTTest|∆List|List▶matr|ln|LnReg|log|logBASE|Logistic|Manual\\-Fit|MATHPRINT|Matr▶list|max|mean|median|Med-Med|min|ModBoxPlot|n[CP]r|n\\/d|nDeriv|▶n/d◀▶Un/d|▶Nom|Normal|normal[cp]df|NormProbPlot|npv|Output|Param|piecewise|Plot[1-3]|PlotsOff|PlotsOn|Pmt_Bgn|Pmt_End|poisson[cp]df|Polar|▶Polar|PolarGC|ΣPrn|prod|Prompt|[12]\\-PropZ(Int|Test)|Pt\\-(Change|Off|On)|PwrReg|Pxl\\-(Change|Off|On)|pxl\\-Test|P▶Rx|P▶Ry|QuadReg|QuartReg|Radian|rand|randBin|randInt|randIntNoRep|randM|randNorm|re\\^θi|Real|real|Recall(GDB|Pic)|▶Rect|RectGC|ref|remainder|round|\\*row|row\\+|\\*row\\+|rowSwap|rref|R▶P[rθ]|2\\-SampFTest|2\\-Samp[TZ]Int|2\\-Samp[TZ]Test|Scatter|Sci|Select|Send|seq|Seq|SEQ|Sequential|setDate|setDtFmt|setTime|setTmFmt|SetUpEditor|Shade|ShadeX²|ShadeF|ShadeNorm|Shade_t|Simul|sin|sin⁻¹|sinh|sinh⁻¹|SinReg|solve|Sort[AD]|startTmr|STATWIZARD (OFF|ON)|stdDev|Store(GDB|Pic)|String▶Equ|su[bm]|Σ|tan|tan⁻¹|Tangent|tanh|tanh⁻¹|t[cp]df|Text|TextColor|Thick|Thin|Time|timeCnv|TInterval|toString|Trace|T\\-Test|tvm_FV|tvm_I%|tvm_N|tvm_Pmt|tv_PV|UnArchive|Un\\/d|uvAxes|uwAxes|[12]\\-Var Stats|variance|Vertical|vwAxes|Web|xyLine|ZBox|ZDecimal|ZFrac1/[2-58]|ZFrac1/10|ZInteger|ZInterval|Zoom In|Zoom Out|ZoomFit|ZoomRcl|ZoomStat|ZoomSto|ZPrevious|ZQuadrant1|ZSquare|ZStandard|Z\\-Test|ZTrig)"
+					"match": "(?<=[^a-z]|Ans|^)(abs|angle|ANOVA|augment|bal|binom[cp]df|checkTmr|X²([cp]df|\\-Test|GOF\\-Test)|conj|cos(h|)(⁻¹|)|cumSum|dayOfWk|dbd|▶Dec|det|dim|▶DMS|e\\^|\\|E|▶Eff|eval|expr|F[cp]df|▶F◀▶D|Fill|Fix|Float|fMax|fMin|fnInt|[fi]Part|▶Frac|gcd|geomet[cp]df|get(Date|Time)|get(Dt|Tm)(Fmt|Str)|getKey|G\\-T|\\|i|identity|imag|inString|int|ΣInt|inv(Binom|Norm|T)|irr|isClockOn|lcm|length|∆List|ln|log(BASE|)|max|mean|median|Med-Med|min|n[CP]r|n\\/d|nDeriv|▶n/d◀▶Un/d|▶Nom|normal[cp]df|npv|piecewise|poisson[cp]df|▶Polar|ΣPrn|prod|[12]\\-PropZ(Int|Test)|pxl\\-Test|P▶Rx|P▶Ry|rand|randBin|randInt|randIntNoRep|randM|randNorm|re\\^θi|real|▶Rect|ref|remainder|round|\\*row|row\\+|\\*row\\+|rowSwap|rref|R▶P[rθ]|seq|setDate|setDtFmt|setTime|setTmFmt|sin|sin⁻¹|sinh|sinh⁻¹|solve|startTmr|stdDev|su[bm]|Σ|tan|tan⁻¹|tanh|tanh⁻¹|t[cp]df|timeCnv|toString|tvm_FV|tvm_I%|tvm_N|tvm_Pmt|tv_PV|uvAxes|uwAxes|variance|vwAxes|xyLine)\\b"
 				},
 				{
 					"name": "entity.name.function.8xp",
-					"match": "(?<=(Goto|Lbl) )[0-9A-Zθ]{1,2}"
+					"match": "\\b(Archive|Asm|AsmComp|Asm84CEPrgm|AUTO|AxesOff|AxesOn|a\\+bi|BackgroundOff|BackgroundOn|BorderColor|Boxplot|Circle|CLASSIC|Clear Entries|ClockOff|ClockOn|ClrAllLists|ClrDraw|ClrHome|ClrList|ClrTableCoordOff|CoordOn|CubicReg|DEC|Degree|Depend(Ask|Auto)|DetectAsym(Off|On)|Diagnostic(Off|On)|Disp(Graph|Table|)|Dot\\-(Thick|Thin)|Draw(F|Inv)|Eng|Equ▶String|Exp(Reg|rOff|rOn)|Fn(Off|On)|Full|Func|GarbageCollect|Get|GetCalc|GridDot|GridLine|GridOffHoriz|Horizontal|HistogramIndpnt(Ask|Auto)|Input|Label(Off|On)|Line|(LinReg)(?=\\((a\\+bx|ax\\+b)\\))|((?<=LinReg)\\((a\\+bx|ax\\+b)\\))|LinRegT(Int|Test)|List▶matr|LnReg|Logistic|Manual\\-Fit|MATHPRINT|Matr▶list|ModBoxPlot|Normal|NormProbPlot|Output|Param|Plot[1-3]|Plots(Off|On)|Pmt_(Bgn|End)|Polar|PolarGC|Prompt|Pt\\-(Change|Off|On)|PwrReg|Pxl\\-(Change|Off|On)|(Quad|Quart)Reg|Radian|Real|Recall(GDB|Pic)|RectGC|2\\-SampFTest|2\\-Samp[TZ]Int|2\\-Samp[TZ]Test|Scatter|Sci|Select|Send|Seq|SEQ|Sequential|SetUpEditor|Shade|ShadeX²|ShadeF|ShadeNorm|Shade_t|Simul|SinReg|Sort[AD]|STATWIZARD (OFF|ON)|Store(GDB|Pic)|String▶Equ|Tangent|Text|TextColor|Thick|Thin|Time|TInterval|Trace|T\\-Test|UnArchive|Un\\/d|[12]\\-Var Stats|Vertical|Web|ZBox|ZDecimal|ZFrac1/[2-58]|ZFrac1/10|ZInteger|ZInterval|Zoom In|Zoom Out|ZoomFit|ZoomRcl|ZoomStat|ZoomSto|ZPrevious|ZQuadrant1|ZSquare|ZStandard|Z\\-Test|ZTrig)\\b"
+				},
+				{
+					"name": "entity.name.function.8xp",
+					"match": "(?<=(Goto|Lbl) )[0-9A-Zθ]{1,2}\\b"
 				}
 			]
 		},
 		"strings": {
 			"name": "string.quoted.double.8xp",
 			"begin": "\"",
-			"end": "\"|\n|(?=|->|→)"
+			"end": "\"|\n|(?=->|→)"
 		},
 		"variables": {
 			"patterns": [
@@ -127,7 +139,7 @@
 		},
 		"headers": {
 			"name": "entity.name.section.8xp",
-			"match": "^\\:DCS[6]{0,1}$"
+			"match": "^\\:DCS(6|)$"
 		}
 	},
 	"scopeName": "source.8xp"
