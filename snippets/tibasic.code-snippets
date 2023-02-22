@@ -8,5 +8,29 @@
                  "End"
                 ],
         "description": "Basic For loop, the fourth argument and parentheses is optional."
+    },
+
+    "if": {
+        "scope": "ti-basic",
+        "prefix": ["if", "If"],
+        "body": ["If ${1:condition}",
+                 "Then",
+                 "$0",
+                 "End"            
+                ],
+        "description": "Basic If statement."
+    },
+
+    "if-else": {
+        "scope": "ti-basic",
+        "prefix": ["ife", "IfE"],
+        "body": ["If ${1:condition}",
+                 "Then",
+                 "${2:statements}",
+                 "Else",
+                 "$0",
+                 "End"
+                ],
+        "description": "Basic If-Else statement."   
     }
 }
