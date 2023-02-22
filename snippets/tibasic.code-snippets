@@ -1,0 +1,12 @@
+{
+    "for": {
+        "scope": "ti-basic",
+        "prefix": ["for", "For"],
+        "body": [
+                 "For(${1:variable},${2:start},${3:end},${4:step})",
+                 "$0",
+                 "End"
+                ],
+        "description": "Basic For loop, the fourth argument and parentheses is optional."
+    }
+}
