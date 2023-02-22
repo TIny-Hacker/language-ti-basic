@@ -51,6 +51,12 @@
         "scopeName": "source.8xp",
         "path": "./syntaxes/ti-basic.tmLanguage.json"
       }
+    ],
+    "snippets": [
+      {
+        "language": "ti-basic",
+        "path": "snippets/tibasic.code-snippets"
+      }
     ]
   }
 }
