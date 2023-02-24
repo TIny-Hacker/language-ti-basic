@@ -32,5 +32,25 @@
                  "End"
                 ],
         "description": "Basic If-Else statement."   
+    },
+
+    "while": {
+        "scope": "ti-basic",
+        "prefix": ["while", "While"],
+        "body": ["While ${1: condition}",
+                 "$0",
+                 "End"
+                ]
+    },
+
+    "repeat":{
+        "scope": "ti-basic",
+        "prefix": ["repeat", "Repeat"],
+        "body": ["Repeat ${1: condition}",
+                 "$0",
+                 "End"
+                ]    
     }
+
+
 }
