@@ -3,7 +3,7 @@
 <img alt="Screenshot" src="https://raw.githubusercontent.com/TIny-Hacker/language-ti-basic/main/assets/screenshot.png" width="250" />
 
 ## About
-This extension provides syntax highlighting for the z80 TI-BASIC language. This extension is meant specifically for the TI-84 Plus CE/83 Premium CE calculators, though it may work with others as well. Other useful features may be added in the future!
+This extension provides syntax highlighting and snippets (provided by [Hamburger317](https://github.com/Hamburger317)) for the z80 TI-BASIC language. This extension is meant specifically for the TI-84 Plus CE/83 Premium CE calculators, though it may work with others as well. Other useful features may be added in the future!
 
 ## FAQ
  * Q: Why can't I load my file in VSCode?<br/>

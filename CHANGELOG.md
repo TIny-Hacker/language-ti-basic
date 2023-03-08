@@ -2,6 +2,12 @@
 
 All notable changes to the "ti-basic" extension will be documented in this file.
 
+## [0.2.0] - 2023-03-08
+
+### Added
+
+- Language snippets provided by [Hamburger317](https://github.com/Hamburger317)
+
 ## [0.1.5] - 2023-02-21
 
 ### Changed
