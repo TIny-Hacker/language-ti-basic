@@ -1,0 +1,56 @@
+{
+    "for": {
+        "scope": "ti-basic",
+        "prefix": ["for", "For"],
+        "body": [
+                 "For(${1:variable},${2:start},${3:end},${4:step})",
+                 "$0",
+                 "End"
+                ],
+        "description": "Basic For loop, the fourth argument and parentheses is optional."
+    },
+
+    "if": {
+        "scope": "ti-basic",
+        "prefix": ["if", "If"],
+        "body": ["If ${1:condition}",
+                 "Then",
+                 "$0",
+                 "End"            
+                ],
+        "description": "Basic If statement."
+    },
+
+    "if-else": {
+        "scope": "ti-basic",
+        "prefix": ["ife", "IfE"],
+        "body": ["If ${1:condition}",
+                 "Then",
+                 "${2:statements}",
+                 "Else",
+                 "$0",
+                 "End"
+                ],
+        "description": "Basic If-Else statement."   
+    },
+
+    "while": {
+        "scope": "ti-basic",
+        "prefix": ["while", "While"],
+        "body": ["While ${1: condition}",
+                 "$0",
+                 "End"
+                ]
+    },
+
+    "repeat":{
+        "scope": "ti-basic",
+        "prefix": ["repeat", "Repeat"],
+        "body": ["Repeat ${1: condition}",
+                 "$0",
+                 "End"
+                ]    
+    }
+
+
+}
