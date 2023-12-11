@@ -36,13 +36,21 @@
 				},
 				{
 					"name": "keyword.control.8xp",
-					"match": "(?<=[^a-z]|Ans)DelVar(?=[^a-zA-Z]|$)"
+					"match": "(?<=[^a-z]|Ans|^)DelVar(?=[^a-zA-Z]|$)"
 				}
 			]
 		},
 		"operators": {
-			"name": "keyword.operator.8xp",
-			"match": "(\\+|-|\\*|/|\\^|\\√\\((.*)\\)->|→|=|!=|≠|>|>=|≥|<|<=|≤|and|or|xor|not)"
+			"patterns": [
+				{
+					"name": "keyword.operator.8xp",
+					"match": "(\\+|-|\\*|/|\\^|\\√\\((.*)\\)->|→|=|!=|≠|>|>=|≥|<|<=|≤)"
+				},
+				{
+					"name": "keyword.operator.logical.8xp",
+					"match": "\\b(and|or|not|xor)\\b"
+				}
+			]
 		},
 		"numbers": {
 			"name": "constant.numeric.8xp",

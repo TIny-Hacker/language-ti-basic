@@ -2,6 +2,12 @@
 
 All notable changes to the "ti-basic" extension will be documented in this file.
 
+## [0.2.1] - 2023-12-11
+
+### Fixed
+
+- Fix matching for DelVar and logical operations with code suggested by [nineteendo](https://github.com/nineteendo)
+
 ## [0.2.0] - 2023-03-08
 
 ### Added
