@@ -47,7 +47,7 @@
 					"match": "(\\+|-|\\*|/|\\^|\\√\\((.*)\\)->|→|=|!=|≠|>|>=|≥|<|<=|≤)"
 				},
 				{
-					"name": "keyword.operator.logical.8xp",
+					"name": "keyword.operator.expression.8xp",
 					"match": "\\b(and|or|not|xor)\\b"
 				}
 			]
