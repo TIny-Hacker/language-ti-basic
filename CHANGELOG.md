@@ -2,6 +2,19 @@
 
 All notable changes to the "ti-basic" extension will be documented in this file.
 
+## [0.2.6] - 2024-01-06
+
+### Added
+
+- Add support for matricies [A] through [J]
+
+### Changed
+
+- Less strict error checking for tokens to correctly highlight more often, mentioned in [#3](https://github.com/TIny-Hacker/language-ti-basic/issues/3)
+- Check for ` ` and `(` to ensure correct syntax for certain tokens
+- Change logical operation scope to `keyword.operator.expression`, suggested by [nineteendo](https://github.com/nineteendo)
+- Handle snippet arguments slightly differently to consistently highlight them
+
 ## [0.2.1] - 2023-12-11
 
 ### Fixed
