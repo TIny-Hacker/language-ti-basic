@@ -14,4 +14,4 @@ This extension provides syntax highlighting and snippets (provided by [Hamburger
 ## Bugs
 If you find a bug or want something added, be sure to [make an issue](https://github.com/TIny-Hacker/language-ti-basic/issues) and let me know!
 
-© Copyright 2023 TIny_Hacker
+© Copyright 2023 - 2024 TIny_Hacker
