@@ -21,13 +21,16 @@
 			"include": "#strings"
 		},
 		{
-			"include": "#variables"
-		},
-		{
 			"include": "#constants"
 		},
 		{
 			"include": "#headers"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#reals"
 		}
 	],
 	"repository": {
@@ -39,7 +42,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.8xp",
-					"match": "(If |Then|Else|For(?=\\()|While |Repeat |End|Pause|Lbl |Goto |Wait |IS>(?=\\()|DS<(?=\\()|Menu(?=\\()|Return|Stop|GraphStyle(?=\\()|GraphColor(?=\\()|OpenLib(?=\\()|ExecLib )"
+					"match": "(If |Then|Else|For(?=\\()|While |Repeat |End|Pause |Lbl |Goto |Wait |IS>(?=\\()|DS<(?=\\()|Menu(?=\\()|Return|Stop|GraphStyle(?=\\()|GraphColor(?=\\()|OpenLib(?=\\()|ExecLib )"
 				},
 				{
 					"name": "keyword.control.8xp",
@@ -71,11 +74,15 @@
 				},
 				{
 					"name": "entity.name.function.8xp",
-					"match": "(abs|angle|ANOVA|augment|bal|binom[cp]df|checkTmr|X²([cp]df|\\-Test|GOF\\-Test)|conj|cos(h|)(⁻¹|)|cumSum|dayOfWk|dbd|▶Dec|det|dim|▶DMS|e\\^|\\|E|▶Eff|eval|expr|F[cp]df|▶F◀▶D|Fill|Fix|Float|fMax|fMin|fnInt|[fi]Part|▶Frac|gcd|geomet[cp]df|get(Date|Time)|get(Dt|Tm)(Fmt|Str)|getKey|G\\-T|\\|i|identity|imag|inString|int|ΣInt|inv(Binom|Norm|T)|irr|isClockOn|lcm|length|∆List|ln|log(BASE|)|max|mean|median|Med-Med|min|n[CP]r|n\\/d|nDeriv|▶n/d◀▶Un/d|▶Nom|normal[cp]df|npv|piecewise|poisson[cp]df|▶Polar|ΣPrn|prod|[12]\\-PropZ(Int|Test)|pxl\\-Test|P▶Rx|P▶Ry|rand|randBin|randInt|randIntNoRep|randM|randNorm|re\\^θi|real|▶Rect|ref|remainder|round|\\*row|row\\+|\\*row\\+|rowSwap|rref|R▶P[rθ]|seq|setDate|setDtFmt|setTime|setTmFmt|sin|sin⁻¹|sinh|sinh⁻¹|solve|startTmr|stdDev|su[bm]|Σ|tan|tan⁻¹|tanh|tanh⁻¹|t[cp]df|timeCnv|toString|tvm_FV|tvm_I%|tvm_N|tvm_Pmt|tv_PV|uvAxes|uwAxes|variance|vwAxes|xyLine)(?=\\()"
+					"match": "(abs|angle|ANOVA|Asm(Comp)?|augment|bal|binom(c|p)df|checkTmr|X²((c|p)df|(GOF)?-Test)|Circle|conj|cos(⁻¹|h(⁻¹)?)?|cumSum|dayOfWk|dbd|det|dim|DS<|e\\^|▶Eff|Equ▶String|eval|expr|F(c|p)df|Fill|fM(ax|in)|fnInt|fPart|gcd|geomet(c|p)df|Get|GetCalc|get(Dt|Tm)Str|identity|imag|inString|int|ΣInt|inv(Binom|Norm|T)|iPart|irr|IS>|lcm|length|Line|ΔList|List▶matr|ln|log(BASE)?|Matr▶list|max|mean|median|min|nDeriv|▶Nom|normal(c|p)df|npv|Output|piecewise|Plot[1-3]|poisson(c|p)df|ΣPrn|prod|[1-2]\\-PropZ(Int|Test)|P(t|xl)\\-(Change|O(ff|n))|pxl\\-Test|P▶R[x-y]|rand(Bin|Int(NoRep)?|M|Norm)|real|ref|remainder|round|\\*row(\\+)?|row(\\+|Swap)|rref|R▶Pr|R▶Pθ|2\\-SampZ(Int|Test)|Select|Send|seq|set(Date|Time)|set(Dt|Tm)Fmt|Shade(X²|F|Norm|_t)?|sin(h)?(⁻¹)?|solve|Sort(A|D)|startTmr|stdDev|String▶Equ|su[bm]|summation Σ|tan(h)?(⁻¹)?|Tangent|t[cp]df|Text(Color)?|timeCnv|toString|variance|Z\\-Test)(?=\\()"
 				},
 				{
 					"name": "entity.name.function.8xp",
-					"match": "(Archive |Asm(?=\\()|AsmComp(?=\\()|Asm84CEPrgm|AUTO|AxesOff|AxesOn|a\\+bi|BackgroundOff|BackgroundOn|BorderColor|Boxplot|Circle(?=\\()|CLASSIC|Clear Entries|ClockOff|ClockOn|ClrAllLists|ClrDraw|ClrHome|ClrList|ClrTableCoordOff|CoordOn|CubicReg|DEC|Degree|Depend(Ask|Auto)|DetectAsym(Off|On)|Diagnostic(Off|On)|Disp(Graph|Table| )|Dot\\-(Thick|Thin)|Draw(F|Inv)|Eng|Equ▶String(?=\\()|Exp(Reg|rOff|rOn)|Fn(Off|On)|Full|Func|GarbageCollect|Get(Calc)?(?=\\()|GridDot|GridLine|GridOffHoriz|Horizontal |HistogramIndpnt(Ask|Auto)|Input |Label(Off|On)|Line(?=\\()|LinReg(?=\\((a\\+bx|ax\\+b)\\))|(?<=LinReg)\\((a\\+bx|ax\\+b)\\)|LinRegT(Int|Test)|List▶matr(?=\\()|LnReg|Logistic |Manual\\-Fit|MATHPRINT|Matr▶list|ModBoxPlot|Normal|NormProbPlot|Output(?=\\()|Param|Plot[1-3](?=\\()|Plots(Off|On)|Pmt_(Bgn|End)|(►)?Polar|PolarGC|Prompt |Pt\\-(Change|Off|On)(?=\\()|PwrReg |Pxl\\-(Change|Off|On)(?=\\()|(Quad|Quart)Reg |Radian|Real|Recall(GDB|Pic) |RectGC|2\\-SampFTest |2\\-SampT(Int|Test) |2\\-SampZ(Int|Test)(?=\\()|Scatter|Sci|Select(?=\\()|Send(?=\\()|Seq|SEQ\\(n(\\+[12])?\\)|Sequential|SetUpEditor |Shade(X²|F|Norm|_t)?(?=\\()|Simul|SinReg |Sort[AD](?=\\()|STATWIZARD (OFF|ON)|Store(GDB|Pic) |String▶Equ(?=\\()|Tangent(?=\\()|Text(?=\\()|TextColor(?=\\()|Thick|Thin|Time|TInterval |Trace|T\\-Test |UnArchive |Un\\/d|[12]\\-Var Stats |Vertical |Web|ZBox|ZDecimal|ZFrac1/[2-58]|ZFrac1/10|ZInteger|ZInterval|Zoom In|Zoom Out|ZoomFit|ZoomRcl|ZoomStat|ZoomSto|ZPrevious|ZQuadrant1|ZSquare|ZStandard|Z\\-Test(?=\\()|ZTrig)"
+					"match": "(Archive|AxesOn|BackgroundOn|BorderColor|ClrList|Disp|Draw(F|Inv)|ExpReg|Fix|FnO(ff|n)|GridDot|GridLine|Horizontal|Lbl|LinReg\\((a\\+bx|ax\\+b)\\)|LinRegT(Int|Test)|LnReg|Logistic|Manual\\-Fit|Med\\-Med| n(C|P)r|Pause|PlotsO(ff|n)|Prompt|PwrReg|Qua(d|rt)Reg|(Recall|Store)(GDB|Pic)|2\\-SampFTest|2\\-SampT(Int|Test)|SetUpEditor|SinReg|TInterval|T\\-Test|UnArchive|[12]\\-Var Stats|Vertical|Wait) "
+				},
+				{
+					"name": "entity.name.function.8xp",
+					"match": "(Asm84CEPrgm|AUTO|AxesOff|a\\+bi|BackgroundOff|Boxplot|CLASSIC|Clear Entries|ClockO(ff|n)|Clr(AllLists|Draw|Home|Table)|CoordO(ff|n)|CubicReg|DEC|▶Dec|Degree|DependA(sk|uto)|DetectAsymO(ff|n)|DiagnosticO(ff|n)|DispGraph|DispTable|▶DMS|Dot\\-Thi(ck|n)|\\|E|Eng|ExprO(ff|n)|▶F◀▶D|Float|▶Frac|Full|Func|GarbageCollect|get(Date|Time)|get(Dt|Tm)Fmt|getKey|GridOff|G\\-T|Histogram|Horiz|IndpntAsk|IndpntAuto|isClockOn|\\|L|LabelO(ff|n)|MATHPRINT|ModBoxplot|▶n\\/d◀▶Un\\/d|Normal|NormProbPlot|Param|Pmt_(Bgn|End)|(▶)?Polar|PolarGC|Radian|rand|re\\^θi|Real|▶Rect|RectGC|Scatter|Sci|Seq|SEQ\\(n(\\+[1-2])?\\)|Sequential|Simul|STATWIZARD O(FF|N)|Thi(ck|n)|Time|Trace|tvm_(FV|I%|N|Pmt|PV)|u[vw]Axes|vwAxes|Web|xyLine|Z(Box|Decimal|Frac(1\\/([2-58]|10))|Inte(ger|rval)|Previous|Quadrant1|Square|Standard|Trig)|Zoom( In| Out|Fit|Rcl|Stat|Sto))"
 				},
 				{
 					"name": "entity.name.function.8xp",
@@ -88,6 +95,26 @@
 			"begin": "\"",
 			"end": "\"|\n|(?=->|→)"
 		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.language.8xp",
+					"match": "(CENTER|LEFT|RIGHT)"
+				},
+				{
+					"name": "constant.language.8xp",
+					"match": "(BLUE|RED|BLACK|MAGENTA|GREEN|ORANGE|BROWN|NAVY|LTBLUE|YELLOW|WHITE|LTGRAY|MEDGRAY|GRAY|DARKGRAY)"
+				},
+				{
+					"name": "constant.language.8xp",
+					"match": "(Blue|Red|Black|Magenta|Green|Orange|Brown|Navy|LtBlue|Yellow|White|LtGray|MedGray|Gray|DarkGray)"
+				}
+			]
+		},
+		"headers": {
+			"name": "entity.name.section.8xp",
+			"match": "^\\:DCS(6|)$"
+		},
 		"variables": {
 			"patterns": [
 				{
@@ -96,7 +123,7 @@
 				},
 				{
 					"name": "variable.parameter.8xp",
-					"match": "([A-Zθ]|Xmin|Xmax|Xscl|Ymin|Ymax|YScl|Xres|ΔX|ΔY|XFact|YFact|TraceStep|Tmin|Tmax|Tstep|θmin|θmax|θstep|[uvw]|((?<=[uvw])\\((nMin\\)))|nMin|nMax|PlotStart|PlotStep)"
+					"match": "(theta|Xmin|Xmax|Xscl|Ymin|Ymax|YScl|Xres|ΔX|ΔY|XFact|YFact|TraceStep|Tmin|Tmax|Tstep|θmin|θmax|θstep|[uvw]|((?<=[uvw])\\((nMin\\)))|nMin|nMax|PlotStart|PlotStep)"
 				},
 				{
 					"name": "variable.parameter.8xp",
@@ -144,21 +171,9 @@
 				}
 			]
 		},
-		"constants": {
-			"patterns": [
-				{
-					"name": "constant.language.8xp",
-					"match": "(CENTER|LEFT|RIGHT)"
-				},
-				{
-					"name": "constant.language.8xp",
-					"match": "(BLUE|RED|BLACK|MAGENTA|GREEN|ORANGE|BROWN|NAVY|LTBLUE|YELLOW|WHITE|LTGRAY|MEDGRAY|GRAY|DARKGRAY)"
-				}
-			]
-		},
-		"headers": {
-			"name": "entity.name.section.8xp",
-			"match": "^\\:DCS(6|)$"
+		"reals": {
+			"name": "variable.parameter.8xp",
+			"match": "[A-Zθ]"
 		}
 	},
 	"scopeName": "source.8xp"

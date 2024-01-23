@@ -2,6 +2,13 @@
 
 All notable changes to the "ti-basic" extension will be documented in this file.
 
+## [0.2.7] - 2024-01-23
+
+### Changed
+
+- Organize commands by ones ending with ` ` and `(`.
+- Restructure syntaxes to properly highlight more stuff
+
 ## [0.2.6] - 2024-01-06
 
 ### Added
