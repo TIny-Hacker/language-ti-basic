@@ -58,7 +58,7 @@
 				},
 				{
 					"name": "entity.name.function.8xp",
-					"match": "(?<=(Goto|Lbl) )[0-9A-Zθ]{1,2}"
+					"match": "(?<=(Goto) )|(?<=(Lbl) )[0-9A-Zθ]{1,2}"
 				}
 			]
 		},
@@ -94,7 +94,7 @@
 			"patterns": [
 				{
 					"name": "keyword.operator.8xp",
-					"match": "(->|\\+|-|\\*|/|\\^|\\√\\((.*)\\)|→|=|!=|≠|>|>=|≥|<|<=|≤|squareroot|xroot)"
+					"match": "(->|\\+|-|\\*|/|\\^|\\√\\(|→|=|!=|≠|>|>=|≥|<|<=|≤|squareroot|xroot)"
 				},
 				{
 					"name": "keyword.operator.8xp",
@@ -191,7 +191,7 @@
 				},
 				{
 					"name": "variable.parameter.8xp",
-					"match": "\\|L[A-Zθ][0-9A-Zθ]{0,4}"
+					"match": "((?<=->|→)|\\|L)[A-Zθ][0-9A-Zθ]{0,4}"
 				},
 				{
 					"name": "variable.parameter.8xp",
@@ -201,7 +201,7 @@
 		},
 		"reals": {
 			"name": "variable.parameter.8xp",
-			"match": "[A-Zθ]*"
+			"match": "[A-Zθ]"
 		}
 	},
 	"scopeName": "source.8xp"
