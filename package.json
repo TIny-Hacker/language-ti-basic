@@ -9,7 +9,7 @@
     "url": "https://tiny-hacker.github.io/"
   },
   "publisher": "tiny-hacker",
-  "license": "GPL-3",
+  "license": "BSD-3-Clause",
   "icon": "assets/extension-icon.png",
   "repository": {
     "type": "git",
