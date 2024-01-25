@@ -58,7 +58,7 @@
 				},
 				{
 					"name": "entity.name.function.8xp",
-					"match": "(?<=(Goto) )|(?<=(Lbl) )[0-9A-Zθ]{1,2}"
+					"match": "((?<=(Goto) )|(?<=(Lbl) ))[0-9A-Zθ]{1,2}"
 				}
 			]
 		},
