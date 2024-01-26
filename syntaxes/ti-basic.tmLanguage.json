@@ -54,17 +54,17 @@
 				},
 				{
 					"name": "entity.name.function.8xp",
-					"match": "(Asm(84CE?)?Prgm|AUTO|AxesOff|a\\+bi|BackgroundOff|Boxplot|CLASSIC|Clear Entries|ClockO(ff|n)|Clr(AllLists|Draw|Home|Table)|CoordO(ff|n)|CubicReg|DEC|(▶|>)Dec|Degree|DependA(sk|uto)|DetectAsymO(ff|n)|DiagnosticO(ff|n)|DispGraph|DispTable|(▶|>)DMS|Dot\\-Thi(ck|n)|\\|E|Eng|ExprO(ff|n)|(▶|>)F(◀|<)(▶|>)D|Float|(▶|>)Frac|Full|Func|GarbageCollect|get(Date|Time)|get(Dt|Tm)Fmt|getKey|GridOff|G\\-T|Histogram|Horiz|IndpntAsk|IndpntAuto|isClockOn|\\|L|LabelO(ff|n)|MATHPRINT|ModBoxplot|(▶|>)n\\/d(◀|<)(▶|>)Un\\/d|Normal|NormProbPlot|Param|Pmt_(Bgn|End)|PolarGC|((▶|>))?Polar|PrintScreen|Radian|rand|re\\^(θ|theta)i|Real|(▶|>)Rect|RectGC|Scatter|Sci|Seq(uential)?|SEQ\\(n(\\+[1-2])?\\)|Simul|STATWIZARD O(FF|N)|startTmr|Thi(ck|n)|Time|Trace(?!Step)|tvm_(FV|I%|N|Pmt|PV)|u[vw]Axes|vwAxes|Web|xyLine|Z(Box|Decimal|Frac(1\\/([2-58]|10))|Inte(ger|rval)|Previous|Quadrant1|Square|Standard|Trig)|Zoom( In| Out|Fit|Rcl|Stat|Sto))"
+					"match": "Asm(84CE?)?Prgm|AUTO|AxesOff|a\\+bi|BackgroundOff|Boxplot|CLASSIC|Clear Entries|ClockO(ff|n)|Clr(AllLists|Draw|Home|Table)|CoordO(ff|n)|CubicReg|DEC|(▶|>)Dec|Degree|DependA(sk|uto)|DetectAsymO(ff|n)|DiagnosticO(ff|n)|DispGraph|DispTable|(▶|>)DMS|Dot\\-Thi(ck|n)|\\|E|Eng|ExprO(ff|n)|(▶|>)F(◀|<)(▶|>)D|Float|(▶|>)Frac|FRAC|Full|Func|GarbageCollect|get(Date|Time)|get(Dt|Tm)Fmt|getKey|GridOff|G\\-T|Histogram|Horiz|IndpntAsk|IndpntAuto|isClockOn|\\|L|LabelO(ff|n)|MATHPRINT|ModBox[pP]lot|(▶|>)n\\/d(◀|<)(▶|>)Un\\/d|Normal|NormProbPlot|Param|Pmt_(Bgn|End)|PolarGC|((▶|>))?Polar|PrintScreen|Radian|rand|re\\^(θ|theta)i|Real|(▶|>)Rect|RectGC|Scatter|Sci|Seq(uential)?|SEQ\\(n(\\+[1-2])?\\)|Simul|STATWIZARD O(FF|N)|startTmr|Thi(ck|n)|Time|Trace(?!Step)|tvm_(FV|I%|N|Pmt|PV)|u[vw]Axes|vwAxes|Web|xyLine|Z(Box|Decimal|Frac(1\\/([2-58]|10))|Inte(ger|rval)|Previous|Quadrant1|Square|Standard|Trig)|Zoom( In| Out|Fit|Rcl|Stat|Sto)"
 				},
 				{
 					"name": "entity.name.function.8xp",
-					"match": "((?<=(Goto) )|(?<=(Lbl) ))[0-9A-Zθ]{1,2}"
+					"match": "(?:(?<=Goto )|(?<=Lbl ))[0-9A-Zθ]{1,2}"
 				}
 			]
 		},
 		"special-chars": {
 			"name": "markup.raw.8xp",
-			"match": "(\\^\\^(r|o|-1|2|T|3)|I%|plot(square|cross|dot)|sharps|small(T|10|[0-9])|(bold)?(up|down)arrow|plotpixel|U?n\\/d)"
+			"match": "(\\^\\^(r|o|-1|2|T|3)|I%|invertedequal|plot(square|cross|dot)|sharps|small(T|10|[0-9])|(bold)?(up|down)arrow|plotpixel|U?n\\/d)"
 		},
 		"snippets": {
 			"name": "variable.other.8xp",
@@ -74,7 +74,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.8xp",
-					"match": "(If|While|Repeat|Pause|Lbl|Goto|Wait|ExecLib) "
+					"match": "(If|While|Repeat|Pause|Lbl|Goto|Wait|ExecLib|DelVar) "
 				},
 				{
 					"name": "keyword.control.8xp",
@@ -83,10 +83,6 @@
 				{
 					"name": "keyword.control.8xp",
 					"match": "(For|IS>|DS<|Menu|GraphStyle|GraphColor|OpenLib)(?=\\()"
-				},
-				{
-					"name": "keyword.control.8xp",
-					"match": "(?<=[^a-z]|Ans|^)DelVar(?=[^a-zA-Z]|$)"
 				}
 			]
 		},
@@ -119,15 +115,15 @@
 			"patterns": [
 				{
 					"name": "constant.language.8xp",
-					"match": "(CENTER|LEFT|RIGHT)"
+					"match": "CENTER|LEFT|RIGHT"
 				},
 				{
 					"name": "constant.language.8xp",
-					"match": "(BLUE|RED|BLACK|MAGENTA|GREEN|ORANGE|BROWN|NAVY|LTBLUE|YELLOW|WHITE|LTGRAY|MEDGRAY|GRAY|DARKGRAY)"
+					"match": "BLUE|RED|BLACK|MAGENTA|GREEN|ORANGE|BROWN|NAVY|LTBLUE|YELLOW|WHITE|LTGRAY|MEDGRAY|GRAY|DARKGRAY"
 				},
 				{
 					"name": "constant.language.8xp",
-					"match": "(Blue|Red|Black|Magenta|Green|Orange|Brown|Navy|LtBlue|Yellow|White|LtGray|MedGray|Gray|DarkGray)"
+					"match": "Blue|Red|Black|Magenta|Green|Orange|Brown|Navy|LtBlue|Yellow|White|LtGray|MedGray|Gray|DarkGray"
 				}
 			]
 		},
@@ -142,36 +138,32 @@
 					"match": "Ans"
 				},
 				{
-					"name": "variable.parameter.8xp",
-					"match": "(Xmin|Xmax|Xscl|Ymin|Ymax|Yscl|[UV]n-1|Xres|(Δ|Delta)X|(Δ|Delta)Y|XFact|YFact|TraceStep|Tmin|Tmax|Tstep|Z?(θ|theta)[mM]in|Z?(θ|theta)[mM]ax|Z?(θ|theta)step|\\|?[uvw]|((?<=[uvw])\\((nMin\\)))|nMin|nMax|PlotStart|PlotStep)"
+					"name": "variable.parameter",
+					"match": "\\[(xbar(1|2)?|sigma[xy]|ybar|recursiven|phat(1|2)?|Sx(1|2|p)|(factor|error)(df|SS|MS))\\]"
 				},
 				{
 					"name": "variable.parameter.8xp",
-					"match": "(ZXmin|ZXmax|ZXscl|ZYmin|ZYmax|ZYscl|ZXres|ZTmin|ZTmax|ZTstep|(θ|theta)step|Z[uvw]|((?<=Z[uvw])\\((n[mM]in\\)))|ZnMin|ZnMax|ZPlotStart|ZPlotStep)"
+					"match": "Xmin|Xmax|Xscl|Ymin|Ymax|Yscl|[UV]n-1|Xres|(Δ|Delta)X|(Δ|Delta)Y|XFact|YFact|TraceStep|Tmin|Tmax|Tstep|Z?(θ|theta)[mM]in|Z?(θ|theta)[mM]ax|Z?(θ|theta)step|\\|?[uvw](?!pper)|((?<=[uvw])\\((nMin\\)))|nMin|nMax|PlotStart|PlotStep"
 				},
 				{
 					"name": "variable.parameter.8xp",
-					"match": "GDB[0-9]"
+					"match": "ZXmin|ZXmax|ZXscl|ZYmin|ZYmax|ZYscl|ZXres|ZTmin|ZTmax|ZTstep|(θ|theta)step|Z[uvw]|((?<=Z[uvw])\\((n[mM]in\\)))|ZnMin|ZnMax|ZPlotStart|ZPlotStep"
 				},
 				{
 					"name": "variable.parameter.8xp",
-					"match": "(Pic[0-9]|Image[0-9])"
+					"match": "(Pic|Image|GDB|Str)[0-9]"
 				},
 				{
 					"name": "variable.parameter.8xp",
-					"match": "(\\[n\\]|x̄|Sx|(Σ|Sigma)x|ȳ|Sy|(Σ|Sigma)y|minX|maxX|minY|maxY|(Σ|Sigma)x|(Σ|Sigma)x(\\^2|²)|(Σ|Sigma)y|(Σ|Sigma)y(\\^2|²)|(Σ|Sigma)xy|RegEQ|\\[(\\|[a-d]|\\|?e|i|r)\\]|r(\\^2|²)|R(\\^2|²)|\\[(p|z|t)\\]|x(\\^2|²)|\\|F|df|ṗ|ṗ1|ṗ2|s|x̄1|x̄2|Sx1|Sx2|Sxp|n1|n2|lower|upper|x1|y1|x2|y2|x3|y3|Q1|Med|Q3)"
+					"match": "\\[n\\]|x̄|Sx|(Σ|Sigma)x|ȳ|Sy|(Σ|Sigma)y|minX|maxX|minY|maxY|(Σ|Sigma)x|(Σ|Sigma)x(\\^2|²)|(Σ|Sigma)y|(Σ|Sigma)y(\\^2|²)|(Σ|Sigma)xy|RegEQ|\\[(\\|[a-d]|\\|?e|i|r)\\]|r(\\^2|²)|R(\\^2|²)|\\[(p|z|t)\\]|x(\\^2|²)|\\|F|df|ṗ|ṗ1|ṗ2|s(?!igma)|x̄1|x̄2|Sx1|Sx2|Sxp|n1|n2|lower|upper|x1|y1|x2|y2|x3|y3|Q1|Med|Q3"
 				},
 				{
 					"name": "variable.parameter.8xp",
-					"match": "(Tbl(Start|Input)|(∆|Delta)Tbl)"
+					"match": "Tbl(Start|Input)|(∆|Delta)Tbl"
 				},
 				{
 					"name": "variable.parameter.8xp",
-					"match": "(theta|pi|alpha|beta|gamma|Delta|delta|epsilon|lambda|mu|greek_pi|rho|Sigma|Phi|Omega|phat|chi|sigma|tau)"
-				},
-				{
-					"name": "variable.parameter.8xp",
-					"match": "Str[0-9]"
+					"match": "theta|pi|alpha|beta|gamma|Delta|delta|epsilon|lambda|mu|greek_pi|rho|Sigma|Phi|Omega|phat|chi|sigma|tau"
 				},
 				{
 					"name": "variable.parameter.8xp",
