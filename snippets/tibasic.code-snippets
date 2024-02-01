@@ -1,7 +1,7 @@
 {
     "for": {
         "scope": "ti-basic",
-        "prefix": ["for", "For"],
+        "prefix": ["For"],
         "body": [
                  "For(${1:<variable>},${2:<start>},${3:<end>},${4:<step>})",
                  "$0",
@@ -12,7 +12,7 @@
 
     "if": {
         "scope": "ti-basic",
-        "prefix": ["if", "If"],
+        "prefix": ["If"],
         "body": ["If ${1:<condition>}",
                  "Then",
                  "$0",
@@ -23,7 +23,7 @@
 
     "if-else": {
         "scope": "ti-basic",
-        "prefix": ["ife", "IfE"],
+        "prefix": ["IfE"],
         "body": ["If ${1:<condition>}",
                  "Then",
                  "${2:statements}",
@@ -36,7 +36,7 @@
 
     "while": {
         "scope": "ti-basic",
-        "prefix": ["while", "While"],
+        "prefix": ["While"],
         "body": ["While ${1:<condition>}",
                  "$0",
                  "End"
@@ -45,7 +45,7 @@
 
     "repeat":{
         "scope": "ti-basic",
-        "prefix": ["repeat", "Repeat"],
+        "prefix": ["Repeat"],
         "body": ["Repeat ${1:<condition>}",
                  "$0",
                  "End"
