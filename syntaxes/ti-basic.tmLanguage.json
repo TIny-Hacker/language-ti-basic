@@ -42,11 +42,11 @@
 			"patterns": [
 				{
 					"name": "entity.name.function.8xp",
-					"match": "prgm[A-Zθ][0-9A-Zθ]{0,7}"
+					"match": "prgm([A-Z]|theta)([0-9A-Z]|theta){0,7}"
 				},
 				{
 					"name": "entity.name.function.8xp",
-					"match": "(abs|angle|ANOVA|Asm(Comp)?|augment|bal|binom(c|p)df|checkTmr|(X|chi)(\\^2|²)((c|p)df|(GOF)?-Test)|Circle|conj|cos((\\^-1|⁻¹)|h((\\^-1|⁻¹))?)?|cumSum|dayOfWk|dbd|det|dim|DS<|e\\^|(▶|>)Eff|Equ(▶|>)String|eval|expr|F(c|p)df|Fill|fM(ax|in)|fnInt|fPart|gcd|geomet(c|p)df|Get|GetCalc|get(Dt|Tm)Str|identity|imag|inString|int|(Σ|Sigma)Int|inv(Binom|Norm|T)|iPart|irr|IS>|lcm|length|Line|(Δ|Delta)List|List(▶|>)matr|ln|log(BASE)?|Matr(▶|>)list|max|mean|median|min|nDeriv|(▶|>)Nom|normal(c|p)df|npv|Output|piece[wW]ise|Plot[1-3]|poisson(c|p)df|(Σ|Sigma)Prn|prod|[1-2]\\-PropZ(Int|Test)|P(t|xl)\\-(Change|O(ff|n))|pxl\\-Test|P(▶|>)R[x-y]|rand(Bin|Int(NoRep)?|M|Norm)|real|ref|remainder|round|\\*row(\\+)?|row(\\+|Swap)|rref|R(▶|>)Pr|R(▶|>)P(θ|theta)|2\\-SampZ(Int|Test)|Select|Send|seq|set(Date|Time)|set(Dt|Tm)Fmt|Shade((X|chi)(\\^2|²)|F|Norm|_t)?|sin(h)?((\\^-1|⁻¹))?|solve|Sort(A|D)|stdDev|String(▶|>)Equ|su[bm]|summation (Σ|Sigma)|tan(h)?((\\^-1|⁻¹))?|Tangent|t[cp]df|Text(Color)?|timeCnv|toString|variance|Z\\-Test)(?=\\()"
+					"match": "(abs|angle|ANOVA|Asm(Comp)?|augment|bal|binom(c|p)df|checkTmr|(X|chi)\\^2((c|p)df|(GOF)?-Test)|Circle|conj|cos(\\^-1|h(\\^-1)?)?|cumSum|dayOfWk|dbd|det|dim|DS<|(e|10)\\^\\^|>Eff|Equ>String|eval|expr|F(c|p)df|Fill|fM(ax|in)|fnInt|fPart|gcd|geomet(c|p)df|Get|GetCalc|get(Dt|Tm)Str|identity|imag|inString|int|SigmaInt|inv(Binom|Norm|T)|iPart|irr|IS>|lcm|length|Line|DeltaList|List>matr|ln|log(BASE)?|Matr>list|max|mean|median|min|nDeriv|>Nom|normal(c|p)df|npv|Output|piece[wW]ise|Plot[1-3]|poisson(c|p)df|SigmaPrn|prod|[1-2]\\-PropZ(Int|Test)|P(t|xl)\\-(Change|O(ff|n))|pxl\\-Test|P>R[x-y]|rand(Bin|Int(NoRep)?|M|Norm)|real|ref|remainder|round|\\*row(\\+)?|row(\\+|Swap)|rref|R>Pr|R>Ptheta|2\\-SampZ(Int|Test)|Select|Send|seq|set(Date|Time)|set(Dt|Tm)Fmt|Shade((X|chi)\\^2|F|Norm|_t)?|sin(h)?(\\^-1)?|solve|Sort(A|D)|stdDev|String>Equ|su[bm]|summation Sigma|tan(h)?(\\^-1)?|Tangent|t[cp]df|Text(Color)?|timeCnv|toString|variance|Z\\-Test)(?=\\()"
 				},
 				{
 					"name": "entity.name.function.8xp",
@@ -54,17 +54,17 @@
 				},
 				{
 					"name": "entity.name.function.8xp",
-					"match": "Asm(84CE?)?Prgm|AUTO|AxesOff|a\\+bi|BackgroundOff|Boxplot|CLASSIC|Clear Entries|ClockO(ff|n)|Clr(AllLists|Draw|Home|Table)|CoordO(ff|n)|CubicReg|DEC|(▶|>)Dec|Degree|DependA(sk|uto)|DetectAsymO(ff|n)|DiagnosticO(ff|n)|DispGraph|DispTable|(▶|>)DMS|Dot\\-Thi(ck|n)|\\|E|Eng|ExprO(ff|n)|(▶|>)F(◀|<)(▶|>)D|Float|(▶|>)Frac|FRAC|Full|Func|GarbageCollect|get(Date|Time)|get(Dt|Tm)Fmt|getKey|GridOff|G\\-T|Histogram|Horiz|IndpntAsk|IndpntAuto|isClockOn|\\|L|LabelO(ff|n)|MATHPRINT|ModBox[pP]lot|(▶|>)n\\/d(◀|<)(▶|>)Un\\/d|Normal|NormProbPlot|Param|Pmt_(Bgn|End)|PolarGC|((▶|>))?Polar|PrintScreen|Radian|rand|re\\^(θ|theta)i|Real|(▶|>)Rect|RectGC|Scatter|Sci|Seq(uential)?|SEQ\\(n(\\+[1-2])?\\)|Simul|STATWIZARD O(FF|N)|startTmr|Thi(ck|n)|Time|Trace(?!Step)|tvm_(FV|I%|N|Pmt|PV)|u[vw]Axes|vwAxes|Web|xyLine|Z(Box|Decimal|Frac(1\\/([2-58]|10))|Inte(ger|rval)|Previous|Quadrant1|Square|Standard|Trig)|Zoom( In| Out|Fit|Rcl|Stat|Sto)"
+					"match": "Asm(84CE?)?Prgm|AxesOff|a\\+bi|BackgroundOff|Boxplot|Clear Entries|ClockO(ff|n)|Clr(AllLists|Draw|Home|Table)|CoordO(ff|n)|CubicReg|>Dec|Degree|DependA(sk|uto)|DetectAsymO(ff|n)|DiagnosticO(ff|n)|DispGraph|DispTable|>DMS|Dot\\-Thi(ck|n)|\\|E|Eng|ExprO(ff|n)|>F<>D|Float|>Frac|Full|Func|GarbageCollect|get(Date|Time)|get(Dt|Tm)Fmt|getKey|GridO(ff|n)|G\\-T|Histogram|Horiz|IndpntAsk|IndpntAuto|isClockOn|\\|L|LabelO(ff|n)|ModBox[pP]lot|>n\\/d<>Un\\/d|Normal|NormProbPlot|Param|Pmt_(Bgn|End)|PolarGC|(>)?Polar|PrintScreen|Radian|rand|re\\^thetai|Real|>Rect|RectGC|Scatter|Sci|Seq(uential)?|SEQ\\(n(\\+[1-2])?\\)|Simul|startTmr|Thi(ck|n)|Time|Trace(?!Step)|tvm_(FV|I%|N|Pmt|PV)|u[vw]Axes|vwAxes|Web|xyLine|Z(Box|Decimal|Frac(1\\/([2-58]|10))|Inte(ger|rval)|Previous|Quadrant1|Square|Standard|Trig)|Zoom( In| Out|Fit|Rcl|Stat|Sto)"
 				},
 				{
 					"name": "entity.name.function.8xp",
-					"match": "(?:(?<=Goto )|(?<=Lbl ))[0-9A-Zθ]{1,2}"
+					"match": "(?:(?<=Goto )|(?<=Lbl ))([0-9A-Z]|theta){1,2}"
 				}
 			]
 		},
 		"special-chars": {
 			"name": "markup.raw.8xp",
-			"match": "(\\^\\^(r|o|-1|2|T|3)|I%|invertedequal|plot(square|cross|dot)|sharps|small(T|10|[0-9])|(bold)?(up|down)arrow|plotpixel|U?n\\/d)"
+			"match": "(\\^\\^(r|o|\\-1|2|T|3)|\\|(N|F|[PC]\\/Y)|I%|invertedequal|(square|cross|dot)plot|sharps|small(T|10|[0-9])|(bold)?(up|down)arrow|plotpixel|U?n\\/d|mathprintbox|plottinydot)"
 		},
 		"snippets": {
 			"name": "variable.other.8xp",
@@ -74,11 +74,11 @@
 			"patterns": [
 				{
 					"name": "keyword.control.8xp",
-					"match": "(If|While|Repeat|Pause|Lbl|Goto|Wait|ExecLib|DelVar) "
+					"match": "(If|While|Repeat|Pause|Lbl|Goto|Wait|DelVar) "
 				},
 				{
 					"name": "keyword.control.8xp",
-					"match": "Then|Else|End|Return|Stop"
+					"match": "Then|Else|End|Return|Stop|ExecLib"
 				},
 				{
 					"name": "keyword.control.8xp",
@@ -90,7 +90,7 @@
 			"patterns": [
 				{
 					"name": "keyword.operator.8xp",
-					"match": "(->|\\+|-|\\*|/|\\^|\\√\\(|→|=|!=|≠|>|>=|≥|<|<=|≤|squareroot|xroot)"
+					"match": "(->|\\+|-|\\*|/|\\^|=|!=|>|>=|<|<=|squareroot|xroot|(sqrt|cuberoot)\\()"
 				},
 				{
 					"name": "keyword.operator.8xp",
@@ -109,13 +109,17 @@
 		"strings": {
 			"name": "string.quoted.double.8xp",
 			"begin": "\"",
-			"end": "\"|\n|(?=->|→)"
+			"end": "\"|\n|(?=->)"
 		},
 		"constants": {
 			"patterns": [
 				{
 					"name": "constant.language.8xp",
 					"match": "CENTER|LEFT|RIGHT"
+				},
+				{
+					"name": "constant.language.8xp",
+					"match": "\\[(MATHPRINT|CLASSIC|(U)?n\\/d|AUTO|DEC|FRAC(\\-APPROX)?|STATWIZARD O(FF|N))\\]"
 				},
 				{
 					"name": "constant.language.8xp",
@@ -139,15 +143,15 @@
 				},
 				{
 					"name": "variable.parameter",
-					"match": "\\[(xbar(1|2)?|sigma[xy]|ybar|recursiven|phat(1|2)?|Sx(1|2|p)|(factor|error)(df|SS|MS))\\]"
+					"match": "\\[(xbar(1|2)?|sigma[xy]|ybar|recursiven|phat(1|2)?|(factor|error)(df|SS|MS))\\]"
 				},
 				{
 					"name": "variable.parameter.8xp",
-					"match": "Xmin|Xmax|Xscl|Ymin|Ymax|Yscl|[UV]n-1|Xres|(Δ|Delta)X|(Δ|Delta)Y|XFact|YFact|TraceStep|Tmin|Tmax|Tstep|Z?(θ|theta)[mM]in|Z?(θ|theta)[mM]ax|Z?(θ|theta)step|\\|?[uvw](?!pper)|((?<=[uvw])\\((nMin\\)))|nMin|nMax|PlotStart|PlotStep"
+					"match": "Xmin|Xmax|Xscl|Ymin|Ymax|Yscl|[UV]n-1|Xres|Delta[XY]|XFact|YFact|TraceStep|Tmin|Tmax|Tstep|Z?theta[mM]in|Z?theta[mM]ax|Z?thetastep|\\|[uvw]|((?<=[uvw])\\((nMin\\)))|nMin|nMax|PlotStart|PlotStep"
 				},
 				{
 					"name": "variable.parameter.8xp",
-					"match": "ZXmin|ZXmax|ZXscl|ZYmin|ZYmax|ZYscl|ZXres|ZTmin|ZTmax|ZTstep|(θ|theta)step|Z[uvw]|((?<=Z[uvw])\\((n[mM]in\\)))|ZnMin|ZnMax|ZPlotStart|ZPlotStep"
+					"match": "ZXmin|ZXmax|ZXscl|ZYmin|ZYmax|ZYscl|ZXres|ZTmin|ZTmax|ZTstep|thetastep|Z[uvw]|((?<=Z[uvw])\\((n[mM]in\\)))|ZnMin|ZnMax|ZPlotStart|ZPlotStep"
 				},
 				{
 					"name": "variable.parameter.8xp",
@@ -155,11 +159,11 @@
 				},
 				{
 					"name": "variable.parameter.8xp",
-					"match": "\\[n\\]|x̄|Sx|(Σ|Sigma)x|ȳ|Sy|(Σ|Sigma)y|minX|maxX|minY|maxY|(Σ|Sigma)x|(Σ|Sigma)x(\\^2|²)|(Σ|Sigma)y|(Σ|Sigma)y(\\^2|²)|(Σ|Sigma)xy|RegEQ|\\[(\\|[a-d]|\\|?e|i|r)\\]|r(\\^2|²)|R(\\^2|²)|\\[(p|z|t)\\]|x(\\^2|²)|\\|F|df|ṗ|ṗ1|ṗ2|s(?!igma)|x̄1|x̄2|Sx1|Sx2|Sxp|n1|n2|lower|upper|x1|y1|x2|y2|x3|y3|Q1|Med|Q3"
+					"match": "\\[(n(1|2)?|i|RegEQ|xhat(1|2)?|yhat|Sigma[xy](\\^2)?|Sx(1|2|p)?|Sy|(min|max)[XY]|Sigmaxy|r(\\^2)?|Med|Q[13]|\\|[Fa-e]|[xy][1-3]|[pstz]|chi\\^2|df|lower|upper|R\\^2|e)\\]"
 				},
 				{
 					"name": "variable.parameter.8xp",
-					"match": "Tbl(Start|Input)|(∆|Delta)Tbl"
+					"match": "Tbl(Start|Input)|DeltaTbl"
 				},
 				{
 					"name": "variable.parameter.8xp",
@@ -167,15 +171,15 @@
 				},
 				{
 					"name": "variable.parameter.8xp",
-					"match": "({)?Y[0-9](?(1)})"
+					"match": "{Y[0-9]}"
 				},
 				{
 					"name": "variable.parameter.8xp",
-					"match": "({)?[XY][1-6]T(?(1)})"
+					"match": "{[XY][1-6]T}"
 				},
 				{
 					"name": "variable.parameter.8xp",
-					"match": "({)?r[1-6](?(1)})"
+					"match": "{r[1-6]}"
 				},
 				{
 					"name": "variable.parameter.8xp",
@@ -183,7 +187,7 @@
 				},
 				{
 					"name": "variable.parameter.8xp",
-					"match": "((?<=->|→)|\\|L)[A-Zθ][0-9A-Zθ]{0,4}"
+					"match": "((?<=->)|\\|L)([A-Z]|theta)([0-9A-Z]|theta){0,4}"
 				},
 				{
 					"name": "variable.parameter.8xp",
@@ -193,7 +197,7 @@
 		},
 		"reals": {
 			"name": "variable.parameter.8xp",
-			"match": "[A-Zθ]"
+			"match": "[A-Z]|theta"
 		}
 	},
 	"scopeName": "source.8xp"
