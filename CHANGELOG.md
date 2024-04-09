@@ -2,6 +2,15 @@
 
 All notable changes to the "ti-basic" extension will be documented in this file.
 
+## [1.0.0] - 2024-04-09
+
+### Added
+- Import TI-BASIC programs through command palette.
+- Export TI-BASIC programs through command palette.
+
+### Changed
+- Re-introduce highlighting for certain unicode characters.
+
 ## [0.2.8] - 2024-01-25
 
 ### Fixed

@@ -1,8 +1,8 @@
 {
   "name": "ti-basic",
   "displayName": "TI-BASIC",
-  "version": "0.2.8",
-  "description": "Syntax highlighting for z80 TI-BASIC",
+  "version": "1.0.0",
+  "description": "VS Code language support for (e)Z80 TI-BASIC",
   "author": {
     "name": "TIny_Hacker",
     "email": "thetiniesthacker@gmail.com",
@@ -24,6 +24,8 @@
   "categories": [
     "Programming Languages"
   ],
+  "activationEvents": [],
+	"main": "/src/extension.js",
   "contributes": {
     "languages": [
       {
@@ -57,6 +59,20 @@
         "language": "ti-basic",
         "path": "snippets/tibasic.code-snippets"
       }
-    ]
-  }
+    ],
+    "commands": [
+			{
+				"command": "extension.importTIBasic",
+				"title": "Import TI-BASIC Program"
+			},
+      {
+        "command": "extension.exportTIBasic",
+        "title": "Export TI-BASIC Program"
+      }
+		]
+  },
+  "scripts": {},
+	"devDependencies": {
+		"@types/vscode": "^1.73.0"
+	}
 }
