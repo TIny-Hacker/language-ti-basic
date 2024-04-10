@@ -30,7 +30,7 @@ function activate(context) {
 					let prgm;
 
 					try {
-						prgm = lib.TIVarFile.loadFromFile('/local/' + fileUri[0].fsPath);
+						prgm = lib.TIVarFile.loadFromFile('/local' + fileUri[0].fsPath.replace(/^[a-zA-Z]:/, '').split(path.sep).join(path.posix.sep));
 					} catch (error) {
 						console.error(error);
 						vscode.window.showErrorMessage('Error: ' + error.message);
@@ -95,7 +95,7 @@ function activate(context) {
 
 						prgm = lib.TIVarFile.createNew(lib.TIVarType.createFromName("Program"), parsed.name, lib.TIModel.createFromName(type));
 						prgm.setContentFromString(source);
-						prgm.saveVarToFile('/local/' + fileUri.fsPath);
+						prgm.saveVarToFile('/local' + fileUri.fsPath.replace(/^[a-zA-Z]:/, '').split(path.sep).join(path.posix.sep));
 					} catch (error) {
 						console.error(error);
 						vscode.window.showErrorMessage('Error: ' + error.message);
