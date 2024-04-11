@@ -2,6 +2,11 @@
 
 All notable changes to the "ti-basic" extension will be documented in this file.
 
+## [1.0.1] - 2024-04-11
+
+### Fixed
+- Importing now works on macOS and Linux as well, not only Windows.
+
 ## [1.0.0] - 2024-04-09
 
 ### Added
