@@ -93,6 +93,8 @@ function activate(context) {
 							source += lines[i].trimStart() + '\r\n';
 						}
 
+						fs.writeFileSync(fileUri.fsPath, '');
+
 						prgm = lib.TIVarFile.createNew(lib.TIVarType.createFromName("Program"), parsed.name, lib.TIModel.createFromName(type));
 						prgm.setContentFromString(source);
 						prgm.saveVarToFile('/local' + fileUri.fsPath.replace(/^[a-zA-Z]:/, '').split(path.sep).join(path.posix.sep));

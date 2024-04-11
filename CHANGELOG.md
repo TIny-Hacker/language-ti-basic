@@ -2,6 +2,12 @@
 
 All notable changes to the "ti-basic" extension will be documented in this file.
 
+## [1.0.2] - 2024-04-11
+
+### Fixed
+
+- Issue with exporting on Windows I missed has been fixed.
+
 ## [1.0.1] - 2024-04-11
 
 ### Fixed
