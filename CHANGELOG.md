@@ -5,16 +5,19 @@ All notable changes to the "ti-basic" extension will be documented in this file.
 ## [1.0.1] - 2024-04-11
 
 ### Fixed
+
 - Importing now works on macOS and Linux as well, not only Windows.
 
 ## [1.0.0] - 2024-04-09
 
 ### Added
+
 - Import TI-BASIC programs through command palette.
 - Export TI-BASIC programs through command palette.
 - Use Emscripten build of [tivars_lib_cpp](https://github.com/adriweb/tivars_lib_cpp) by [Adriweb](https://github.com/adriweb/tivars_lib_cpp).
 
 ### Changed
+
 - Re-introduce highlighting for certain unicode characters.
 
 ## [0.2.8] - 2024-01-25
