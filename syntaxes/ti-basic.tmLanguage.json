@@ -50,7 +50,7 @@
 				},
 				{
 					"name": "entity.name.function.8xp",
-					"match": "(Archive|AxesOn|BackgroundOn|BorderColor|ClrList|Disp|Draw(F|Inv)|ExpReg|Fix|FnO(ff|n)|GridDot|GridLine|Horizontal|Input|Lbl|LinReg\\((a\\+bx|ax\\+b)\\)|LinRegT(Int|Test)|LnReg|Logistic|Manual\\-Fit|Med\\-Med| n(C|P)r|Pause|PlotsO(ff|n)|Prompt|PwrReg|Qua(d|rt)Reg|(Recall|Store)(GDB|Pic)|2\\-Samp(F|𝐅)Test|2\\-SampT(Int|Test)|SetUpEditor|SinReg|TInterval|T\\-Test|UnArchive|(1|2)-Var Stats|Vertical|Wait) "
+					"match": "(Archive|AxesOn|BackgroundOn|BorderColor|ClrList|Disp|Draw(F|Inv)|ExpReg|Fix|FnO(ff|n)|GridDot|GridLine|Horizontal|Input|Lbl|LinReg\\((a\\+bx|ax\\+b)\\)|LinRegT(Int|Test)|LnReg|Logistic|Manual\\-Fit|Med\\-Med| n(C|P)r|PlotsO(ff|n)|Prompt|PwrReg|Qua(d|rt)Reg|(Recall|Store)(GDB|Pic)|2\\-Samp(F|𝐅)Test|2\\-SampT(Int|Test)|SetUpEditor|SinReg|TInterval|T\\-Test|UnArchive|(1|2)-Var Stats|Vertical|Wait) "
 				},
 				{
 					"name": "entity.name.function.8xp",
@@ -74,11 +74,11 @@
 			"patterns": [
 				{
 					"name": "keyword.control.8xp",
-					"match": "(If|While|Repeat|Pause|Lbl|Goto|Wait|DelVar) "
+					"match": "(If|While|Repeat|Lbl|Goto|Wait|DelVar) "
 				},
 				{
 					"name": "keyword.control.8xp",
-					"match": "Then|Else|End|Return|Stop|ExecLib"
+					"match": "Then|Else|End|Pause|Return|Stop|ExecLib"
 				},
 				{
 					"name": "keyword.control.8xp",
