@@ -12,6 +12,7 @@ All notable changes to the "ti-basic" extension will be documented in this file.
 ### Added
 - Import TI-BASIC programs through command palette.
 - Export TI-BASIC programs through command palette.
+- Use Emscripten build of [tivars_lib_cpp](https://github.com/adriweb/tivars_lib_cpp) by [Adriweb](https://github.com/adriweb/tivars_lib_cpp).
 
 ### Changed
 - Re-introduce highlighting for certain unicode characters.

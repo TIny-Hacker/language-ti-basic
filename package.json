@@ -1,7 +1,7 @@
 {
   "name": "ti-basic",
   "displayName": "TI-BASIC",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "VS Code language support for (e)Z80 TI-BASIC",
   "author": {
     "name": "TIny_Hacker",
@@ -25,7 +25,7 @@
     "Programming Languages"
   ],
   "activationEvents": [],
-	"main": "/src/extension.js",
+  "main": "/src/extension.js",
   "contributes": {
     "languages": [
       {
@@ -61,18 +61,18 @@
       }
     ],
     "commands": [
-			{
-				"command": "extension.importTIBasic",
-				"title": "Import TI-BASIC Program"
-			},
+      {
+        "command": "extension.importTIBasic",
+        "title": "Import TI-BASIC Program"
+      },
       {
         "command": "extension.exportTIBasic",
         "title": "Export TI-BASIC Program"
       }
-		]
+    ]
   },
   "scripts": {},
-	"devDependencies": {
-		"@types/vscode": "^1.73.0"
-	}
+  "devDependencies": {
+    "@types/vscode": "^1.73.0"
+  }
 }
