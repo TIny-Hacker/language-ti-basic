@@ -26,6 +26,12 @@ function activate(context) {
 				console.log('Selected file: ' + fileUri[0].fsPath);
 				const editor = vscode.window.activeTextEditor;
 
+				if (editor == undefined) {
+					console.error('No text editor active. Create a new file first, then try again.');
+					vscode.window.showErrorMessage('Error: No text editor active. Create a new file first, then try again.');
+					return;
+				}
+
 				if (editor && lib) {
 					let prgm;
 

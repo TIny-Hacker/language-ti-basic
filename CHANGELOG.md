@@ -2,6 +2,12 @@
 
 All notable changes to the "ti-basic" extension will be documented in this file.
 
+## [1.0.3] - 2024-05-15
+
+### Added
+
+- Error message if no text editor is open when importing a file.
+
 ## [1.0.2] - 2024-04-11
 
 ### Fixed
