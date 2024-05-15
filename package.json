@@ -1,7 +1,7 @@
 {
   "name": "ti-basic",
   "displayName": "TI-BASIC",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "VS Code language support for (e)Z80 TI-BASIC",
   "author": {
     "name": "TIny_Hacker",
