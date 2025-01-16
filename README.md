@@ -28,4 +28,4 @@ This will allow you to name and save the file. You can now use a program like [T
 ## Bugs
 If you find a bug or want something added, be sure to [make an issue](https://github.com/TIny-Hacker/language-ti-basic/issues) and let me know!
 
-© Copyright 2023 - 2024 TIny_Hacker
+© Copyright 2023 - 2025 TIny_Hacker
