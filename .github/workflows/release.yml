@@ -28,6 +28,9 @@ jobs:
             exit 1
           fi
 
+      - name: Set VS Code publisher ID
+        run: npm pkg set publisher=LucasLavallee
+
       - name: Package extension
         run: npx --yes @vscode/vsce package --no-dependencies --out ti-basic.vsix
 
