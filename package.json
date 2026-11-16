@@ -1,7 +1,7 @@
 {
   "name": "ti-basic-plus-ce",
   "displayName": "TI-Basic Plus CE",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "VS Code language support for (e)Z80 TI-BASIC",
   "author": {
     "name": "Lucas Lavallee"
