@@ -1,0 +1,30 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    background: var(--vscode-editor-background, #1e1e1e);
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+}
+
+#lcd {
+    width: min(100vw, calc(100vh * 4 / 3));
+    height: min(75vw, 100vh);
+    image-rendering: pixelated;
+    background: #000;
+}
+
+#status {
+    position: fixed;
+    left: 8px;
+    bottom: 8px;
+    font: 12px var(--vscode-font-family, sans-serif);
+    color: var(--vscode-descriptionForeground, #999);
+}
+
+#status.hidden { display: none; }

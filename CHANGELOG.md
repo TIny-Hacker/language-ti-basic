@@ -2,6 +2,25 @@
 
 All notable changes to the "ti-basic" extension will be documented in this file.
 
+## [1.0.7] - 2026-11-16
+
+### Changed
+
+- Update the extension logo.
+- Set the publisher ID in the release package.
+
+## [1.0.6] - 2026-11-12
+
+### Changed
+
+- Fix the package name for marketplace release.
+
+## [1.0.5] - 2026-11-12
+
+### Changed
+
+- Rename the extension to TI-Basic Plus CE.
+
 ## [1.0.3] - 2024-05-15
 
 ### Added

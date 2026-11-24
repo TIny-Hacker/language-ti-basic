@@ -1,9 +1,15 @@
-# TI-BASIC Language <a href="https://marketplace.visualstudio.com/items?itemName=tiny-hacker.ti-basic"><img alt="Visual Studio Marketplace Version" src="https://img.shields.io/visual-studio-marketplace/v/tiny-hacker.ti-basic?label=Visual%20Studio%20Marketplace"></a> <a href="https://marketplace.visualstudio.com/items?itemName=tiny-hacker.ti-basic"><img alt="Visual Studio Marketplace Downloads" src="https://img.shields.io/visual-studio-marketplace/d/tiny-hacker.ti-basic?label=Downloads"></a> <a href="https://marketplace.visualstudio.com/items?itemName=tiny-hacker.ti-basic"><img alt="Visual Studio Marketplace Rating" src="https://img.shields.io/visual-studio-marketplace/r/tiny-hacker.ti-basic?label=Rating"></a>
+# TI-Basic Plus CE
 
 <img alt="Screenshot" src="https://raw.githubusercontent.com/TIny-Hacker/language-ti-basic/main/assets/screenshot.png" width="250" />
 
 ## About
-This extension provides syntax highlighting, snippets (provided by [Hamburger317](https://github.com/Hamburger317)), and importing / exporting for the (e)Z80 TI-BASIC language (using an Emscripten build of [tivars_lib_cpp](https://github.com/adriweb/tivars_lib_cpp) courtesy of [Adriweb](https://github.com/adriweb/)). A big thank you to [nineteendo](https://github.com/nineteendo) as well for helping debug and correct a lot of the highlighting! This extension is meant specifically for the TI-84 Plus CE/83 Premium CE calculators, though it may work with others as well. Other useful features may be added in the future!
+This extension provides syntax highlighting, snippets (provided by [Hamburger317](https://github.com/Hamburger317)), TI-BASIC program import and export, and an integrated CEmu calculator for the (e)Z80 TI-BASIC language. Import and export use an Emscripten build of [tivars_lib_cpp](https://github.com/adriweb/tivars_lib_cpp), courtesy of [Adriweb](https://github.com/adriweb/). Thanks to [nineteendo](https://github.com/nineteendo) for helping debug and improve the highlighting. The extension is intended for TI-84 Plus CE/83 Premium CE calculators, though it may work with others.
+
+## Installation
+Download a `.vsix` file from the [GitHub Releases](https://github.com/LucasLavalleeMA/language-ti-basic/releases) page and install it with **Extensions: Install from VSIX...** in VS Code. Once published, the extension will be available on the [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=LucasLavalleeMA.ti-basic-plus-ce).
+
+## Using CEmu
+Open a `.8xp` or `.83p` file and press <kbd>F5</kbd> to build and run it in CEmu. The TI-84 CE activity-bar view provides the embedded calculator. You must provide your own calculator ROM to use the embedded emulator; see the [CEmu setup walkthrough](walkthroughs/1-sidebar.md). Alternatively, configure a native CEmu installation in the `tibasic.cemu.executablePath` setting.
 
 ## FAQ
  * Q: Why can't I load my file in VSCode?<br/>
@@ -24,6 +30,9 @@ To export a TI-BASIC program to a file you can transfer to your calculator, firs
 ![Export TI-BASIC Program](assets/export-command.png)
 
 This will allow you to name and save the file. You can now use a program like [TI-Connect CE](https://education.ti.com/en/products/computer-software/ti-connect-ce-sw) or [TiLP](http://lpg.ticalc.org/prj_tilp/) to transfer the exported file to your calculator.
+
+## Releases
+Releases are built automatically when a version tag is pushed. Update the version in `package.json`, update `CHANGELOG.md`, then push a tag matching the package version (for example, `v1.0.5`). The workflow packages the extension as a `.vsix` file and attaches it to a GitHub Release with generated release notes.
 
 ## Bugs
 If you find a bug or want something added, be sure to [make an issue](https://github.com/TIny-Hacker/language-ti-basic/issues) and let me know!

@@ -1,0 +1,41 @@
+{
+    "_comment": "Merge these keys into the existing 'contributes' block of package.json.",
+    "contributes": {
+        "commands": [
+            { "command": "extension.openCEmu", "title": "TI-BASIC: Open CEmu Calculator" },
+            { "command": "extension.runInCEmu", "title": "TI-BASIC: Compile Active File and Run in CEmu" }
+        ],
+        "taskDefinitions": [
+            {
+                "type": "tibasic",
+                "required": ["action"],
+                "properties": {
+                    "action": {
+                        "type": "string",
+                        "enum": ["run", "build"],
+                        "description": "'run' compiles the active file to .8xp and runs it in CEmu; 'build' only compiles."
+                    }
+                }
+            }
+        ],
+        "configuration": {
+            "title": "TI-BASIC",
+            "properties": {
+                "tibasic.cemu.romPath": {
+                    "type": "string",
+                    "default": "",
+                    "description": "Path to your TI-84 Plus CE ROM image. You must supply this yourself."
+                },
+                "tibasic.build.outputDir": {
+                    "type": "string",
+                    "default": "build",
+                    "description": "Folder (relative to the workspace) where compiled .8xp files are written."
+                }
+            }
+        },
+        "keybindings": [
+            { "command": "workbench.action.tasks.build", "key": "f5", "when": "editorLangId == ti-basic" }
+        ]
+    },
+    "activationEvents": ["onCommand:extension.openCEmu", "onCommand:extension.runInCEmu", "onTaskType:tibasic"]
+}

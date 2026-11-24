@@ -1,22 +1,20 @@
 {
-  "name": "ti-basic",
-  "displayName": "TI-BASIC",
-  "version": "1.0.3",
+  "name": "ti-basic-plus-ce",
+  "displayName": "TI-Basic Plus CE",
+  "version": "1.0.7",
   "description": "VS Code language support for (e)Z80 TI-BASIC",
   "author": {
-    "name": "TIny_Hacker",
-    "email": "thetiniesthacker@gmail.com",
-    "url": "https://tiny-hacker.github.io/"
+    "name": "Lucas Lavallee"
   },
-  "publisher": "tiny-hacker",
+  "publisher": "LucasLavalleeMA",
   "license": "BSD-3-Clause",
   "icon": "assets/extension-icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TIny-Hacker/language-ti-basic"
+    "url": "https://github.com/LucasLavalleeMA/language-ti-basic.git"
   },
   "bugs": {
-    "url": "https://github.com/TIny-Hacker/language-ti-basic/issues"
+    "url": "https://github.com/LucasLavalleeMA/language-ti-basic/issues"
   },
   "engines": {
     "vscode": "^1.75.0"
@@ -24,7 +22,17 @@
   "categories": [
     "Programming Languages"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onCommand:extension.cemuWalkthrough",
+    "onCommand:extension.downloadCEmu",
+    "onCommand:extension.locateCEmu",
+    "onCommand:extension.openCEmu",
+    "onCommand:extension.openCEmuInEditor",
+    "onCommand:extension.runInCEmu",
+    "onCommand:extension.selectCEmuRom",
+    "onTaskType:tibasic",
+    "onView:tibasic.cemuView"
+  ],
   "main": "/src/extension.js",
   "contributes": {
     "languages": [
@@ -68,8 +76,200 @@
       {
         "command": "extension.exportTIBasic",
         "title": "Export TI-BASIC Program"
+      },
+      {
+        "command": "extension.setTIBasicDestination",
+        "title": "Set TI-BASIC Export Destination Folder"
+      },
+      {
+        "command": "extension.exportActiveTIBasic",
+        "title": "Export Active TI-BASIC File"
+      },
+      {
+        "command": "extension.exportFolderTIBasic",
+        "title": "Export All TI-BASIC Files in Folder"
+      },
+      {
+        "command": "extension.openCEmu",
+        "title": "TI-BASIC: Show CEmu Calculator (Sidebar)"
+      },
+      {
+        "command": "extension.runInCEmu",
+        "title": "TI-BASIC: Compile Active File and Run in CEmu"
+      },
+      {
+        "command": "extension.locateCEmu",
+        "title": "TI-BASIC: Locate CEmu Executable"
+      },
+      {
+        "command": "extension.selectCEmuRom",
+        "title": "TI-BASIC: Select TI-84 Plus CE ROM"
+      },
+      {
+        "command": "extension.downloadCEmu",
+        "title": "TI-BASIC: Download CEmu"
+      },
+      {
+        "command": "extension.cemuWalkthrough",
+        "title": "TI-BASIC: CEmu Setup Walkthrough"
+      },
+      {
+        "command": "extension.openCEmuInEditor",
+        "title": "TI-BASIC: Open CEmu Calculator in Editor Tab",
+        "icon": "$(link-external)"
       }
-    ]
+    ],
+    "taskDefinitions": [
+      {
+        "type": "tibasic",
+        "required": [
+          "action"
+        ],
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "run",
+              "build"
+            ],
+            "description": "'run' compiles the active file to .8xp and runs it in CEmu; 'build' only compiles."
+          }
+        }
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "workbench.action.tasks.build",
+        "key": "f5",
+        "when": "editorLangId == ti-basic"
+      }
+    ],
+    "configuration": {
+      "title": "TI-BASIC",
+      "properties": {
+        "tibasic.cemu.executablePath": {
+          "type": "string",
+          "default": "",
+          "description": "Path to a native CEmu executable (CEmu.exe, the CEmu binary, or CEmu.app on macOS). Leave empty to auto-detect common install locations. Prebuilt downloads: https://github.com/CE-Programming/CEmu/releases"
+        },
+        "tibasic.cemu.romPath": {
+          "type": "string",
+          "default": "",
+          "description": "Path to your TI-84 Plus CE ROM image. You must supply this yourself. Required by the embedded calculator; optional for native CEmu if you already set it up in CEmu's own wizard."
+        },
+        "tibasic.cemu.mode": {
+          "type": "string",
+          "default": "auto",
+          "enum": [
+            "auto",
+            "external",
+            "embedded"
+          ],
+          "enumDescriptions": [
+            "Run the calculator inside VS Code if a WebAssembly build is bundled in media/cemu; otherwise launch native CEmu.",
+            "Always launch the native CEmu application in its own window.",
+            "Run the calculator inside VS Code (needs media/cemu/cemu.js and cemu.wasm; falls back to native CEmu if they are missing)."
+          ],
+          "description": "Where programs run: inside the VS Code sidebar, or in the native CEmu window."
+        },
+        "tibasic.build.outputDir": {
+          "type": "string",
+          "default": "build",
+          "description": "Folder (relative to the workspace) where compiled .8xp files are written."
+        }
+      }
+    },
+    "walkthroughs": [
+      {
+        "id": "tibasic.cemuSetup",
+        "title": "Run TI-BASIC in CEmu",
+        "description": "Use the TI-84 CE calculator in the sidebar so F5 compiles and runs your program.",
+        "steps": [
+          {
+            "id": "tibasic.cemu.sidebar",
+            "title": "Open the calculator in the sidebar",
+            "description": "The TI-84 CE icon in the activity bar shows the calculator inside VS Code.\n[Show Calculator](command:extension.openCEmu)",
+            "media": {
+              "markdown": "walkthroughs/1-sidebar.md"
+            },
+            "completionEvents": [
+              "onCommand:extension.openCEmu",
+              "onView:tibasic.cemuView"
+            ]
+          },
+          {
+            "id": "tibasic.cemu.rom",
+            "title": "Provide your ROM",
+            "description": "The emulator needs a ROM dumped from your own calculator.\n[Select ROM](command:extension.selectCEmuRom)",
+            "media": {
+              "markdown": "walkthroughs/2-rom.md"
+            },
+            "completionEvents": [
+              "onCommand:extension.selectCEmuRom",
+              "onSettingChanged:tibasic.cemu.romPath"
+            ]
+          },
+          {
+            "id": "tibasic.cemu.run",
+            "title": "Run a program",
+            "description": "Press F5 in a TI-BASIC file.\n[Compile and Run](command:extension.runInCEmu)",
+            "media": {
+              "markdown": "walkthroughs/3-run.md"
+            },
+            "completionEvents": [
+              "onCommand:extension.runInCEmu"
+            ]
+          },
+          {
+            "id": "tibasic.cemu.native",
+            "title": "Optional: use native CEmu",
+            "description": "Prebuilt downloads, no compiling needed.\n[Download CEmu](command:extension.downloadCEmu)\n[Locate CEmu](command:extension.locateCEmu)",
+            "media": {
+              "markdown": "walkthroughs/4-native.md"
+            },
+            "completionEvents": [
+              "onCommand:extension.locateCEmu",
+              "onSettingChanged:tibasic.cemu.executablePath"
+            ]
+          },
+          {
+            "id": "tibasic.cemu.build",
+            "title": "Optional: build from source",
+            "description": "Only if there is no prebuilt binary for you.",
+            "media": {
+              "markdown": "walkthroughs/5-build.md"
+            }
+          }
+        ]
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "tibasic",
+          "title": "TI-84 CE",
+          "icon": "assets/calculator.svg"
+        }
+      ]
+    },
+    "views": {
+      "tibasic": [
+        {
+          "type": "webview",
+          "id": "tibasic.cemuView",
+          "name": "Calculator"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "extension.openCEmuInEditor",
+          "when": "view == tibasic.cemuView",
+          "group": "navigation"
+        }
+      ]
+    }
   },
   "scripts": {},
   "devDependencies": {
